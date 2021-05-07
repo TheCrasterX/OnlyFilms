@@ -39,20 +39,13 @@
     <section class="sectionprincipal">
         <h1>Formulario de registro</h1>
         <section id="section1">
-            <form class="form" action="index.php" method="POST">
+            <form class="form" action="classBBDD.php" method="POST">
                 <hr>
                 <legend>Regístrate</legend><br><br>
                 <input type="text" name="user" placeholder="Usuario" require></input><br><br>
-                <input type="password" name="password" placeholder="Contraseña" require></input><br><br>
-                <input type="text" name="biografia" placeholder="Biografía" require><br><br>
-                <input type="date" name="birthDate"><br><br>
-                <input type="text" name="nacionalidad" placeholder="Nacionalidad" require><br><br>
-                <select name="sexo">
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                    <option value="No Binario">No Binario</option>
-                </select>
-                <input type="checkbox" require>Aceptar términos y condiciones<br><br>
+                <input type="password" name="pass" placeholder="Contraseña" require></input><br><br>
+                <input type="text" name="email" placeholder="Email" require><br><br>
+                <input type="date" name="birthDate" require><br><br>
                 <hr>
                 <input type="submit" value="Registrar" name="registrar">
             </form>
