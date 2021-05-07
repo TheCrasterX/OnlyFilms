@@ -30,12 +30,12 @@
 <section class="sectionprincipal">
   <h2>¿Eres ya usuario?</h2>
     <section id="section1">
-    <form action="index.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
+    <form action="classBBDD.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
     <hr>
       <h2>Login</h2>
         <input type="text" name="user" placeholder="Usuario" require=""><br><br> <!-- Pido usuario y contraseña -->
         <input type="password" name="password" placeholder="Contraseña" require=""><br><br>
-        <input type="submit" value="Entrar" name="registrar"> <!-- Creo botón de entrar si ya está registrado -->
+        <input type="submit" value="Entrar" name="entrar"> <!-- Creo botón de entrar si ya está registrado -->
         <hr>
     </form>
   </section>
