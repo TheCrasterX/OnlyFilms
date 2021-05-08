@@ -35,7 +35,7 @@
       <h2>Login</h2>
         <input type="text" name="user" placeholder="Usuario" require=""><br><br> <!-- Pido usuario y contraseña -->
         <input type="password" name="pass" placeholder="Contraseña" require=""><br><br>
-        <input type="submit" value="Entrar" name="entrar"> <!-- Creo botón de entrar si ya está registrado -->
+        <input type="submit" name="entrar" value="Entrar"> <!-- Creo botón de entrar si ya está registrado -->
         <hr>
     </form>
   </section>
@@ -45,6 +45,4 @@
     </form>
   </section>
   </section>
-
-
 </body></html>
