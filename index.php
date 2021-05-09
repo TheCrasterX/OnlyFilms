@@ -46,10 +46,11 @@
             <div id="preguntaUsuario">
                 <img src="#">
                 <?php
-                    echo '<textarea placeholder="¿Qué hay de nuevo ';
+                    echo '<form action="classBBDD.php" method="post">';
+                    echo '<textarea name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
-                    //echo '<textarea placeholder="¿Qué hay de nuevo @usuario?"></textarea>';
+                    echo '<input type="submit" value="Publicar" name="publicar"></form>';
                 ?>
             </div>
             <div class="peli">

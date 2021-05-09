@@ -41,7 +41,7 @@ session_start();
     $dbname="onlyfilms";
 
     $MyBBDD = new BBDD($host, $user, $password, $dbname, $port, $socket);
-
+//Esta funcion nos permite registrar a los usuarios en la bbdd e iniciarles sesion automaticamente
     if(isset($_POST['registrar'])) {
         $sql = "INSERT INTO only_users (usuario, pass, email, fechNacimiento) VALUES ('".$_POST['user']."','".$_POST['pass']."','".$_POST['email']."', '".$_POST['birthDate']."')";
         $MyBBDD->consulta($sql);
@@ -74,6 +74,12 @@ session_start();
                 }
             }
         }
+    }
+//Esta funcion nos permite publicar los mensajes de los usuarios y registrarlos en la bbdd
+    if(isset($_POST['publicar'])) {
+        $publicacion = $_POST['publicacion'];
+        $sql = "INSERT INTO only_post (usuario, comentario) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."')";
+        $MyBBDD->consulta($sql);
     }
 ?>
     
