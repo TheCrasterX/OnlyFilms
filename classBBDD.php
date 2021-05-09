@@ -45,6 +45,13 @@ session_start();
     if(isset($_POST['registrar'])) {
         $sql = "INSERT INTO only_users (usuario, pass, email, fechNacimiento) VALUES ('".$_POST['user']."','".$_POST['pass']."','".$_POST['email']."', '".$_POST['birthDate']."')";
         $MyBBDD->consulta($sql);
+        echo "<form action='index.php' method='post'>
+            <input type='submit' name='perfil' value='Perfil'><br>
+            </form>";
+            $_SESSION['UsuarioIniciado'] = $_POST['user'];
+            $_SESSION['ContraUsuario'] = $_POST['pass'];
+            echo $_SESSION['UsuarioIniciado'];
+            echo $_SESSION['ContraUsuario'];
     }
     /*Esta función no permite iniciar sesion con un usuario que no exista en la bbdd y se cuelga por ello*/
     if(isset($_POST['entrar'])){
@@ -56,7 +63,7 @@ session_start();
             while ($fila = $MyBBDD->extraer_registro()) {
                 foreach ($fila as $indice => $valor) {
                     if($valor ==  $_SESSION['ContraUsuario']) {
-                        echo "<form action='index.html' method='post'>
+                        echo "<form action='index.php' method='post'>
                             <input type='submit' name='perfil' value='Perfil'><br>
                             </form>";
                     } else {
