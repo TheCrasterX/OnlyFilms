@@ -46,13 +46,34 @@
             <div id="preguntaUsuario">
                 <img src="#">
                 <?php
-                    echo '<form action="classBBDD.php" method="post">';
-                    echo '<textarea name="publicacion" placeholder="¿Qué hay de nuevo ';
+                    echo '<form action="index.php" method="post">';
+                    echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
                     echo '<input type="submit" value="Publicar" name="publicar"></form>';
                 ?>
             </div>
+                <?php
+                echo'<br>';
+                ?>
+            <?php
+                if (isset($_POST['actualizar']) || isset($_POST['publicar'])) {
+                    $arrayPost = array();
+                    $sql='SELECT comentario FROM only_post ORDER BY fecha DESC';
+                    $MyBBDD->consulta($sql);
+                    while ($fila = $MyBBDD->extraer_registro()) {
+                        foreach ($fila as $indice => $valor) {
+                            array_push($arrayPost, $valor);
+                        }
+                    }
+                    for ($i=0; $i < count($arrayPost) ; $i++) { 
+                        echo '<div class="navegador"><img src="#"><p>'.$arrayPost[$i].'</p></div>';//Tamara da estilo a la clase navegador para poner los post como tu quieras
+                        echo '<br>';
+                    }
+                    unset($arrayPost);
+                }
+                    
+                ?>
             <div class="peli">
                 <p class="titulo">Titulo pelicula</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus quos rerum alias? Cum veniam,
