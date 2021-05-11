@@ -113,7 +113,8 @@
                     }
                 }
                 for ($i=0; $i < 4 ; $i++) { 
-                    echo '<div class="navegador"><img src="#"><p>'.$arrayPersonas[$i].'</p></div>';
+                    /*Aqui tambien puedes añadir estilos Tamara*/
+                    echo '<div class="navegador"><img src="#"><p class="personaRecomendada">'.$arrayPersonas[$i].'</p></div>';
                     echo '<br>';
                 }
                 ?>
