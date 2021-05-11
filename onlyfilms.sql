@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-05-2021 a las 21:59:33
+-- Tiempo de generación: 11-05-2021 a las 23:45:07
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -44,7 +44,14 @@ INSERT INTO `only_post` (`id`, `usuario`, `comentario`, `fecha`) VALUES
 (15, 'Mario', 'Humanes es una aldea', '2021-05-06 00:00:00'),
 (19, 'Periquito', 'Buenas a todos gente de Fuenla', '2021-05-11 21:24:35'),
 (20, 'Mario', 'Sin pijama como la Becky G', '2021-05-11 21:27:37'),
-(26, 'Mario', 'Tamara la dieta!', '2021-05-11 21:33:03');
+(66, 'Mario', 'No entraré en la casa de Odin con miedo!', '2021-05-11 23:23:37'),
+(67, 'Mario', 'Tomo me male sal', '2021-05-11 23:36:29'),
+(69, 'TheCrasterX', 'Ponganme un jagger con cocacolita', '2021-05-11 23:41:57'),
+(70, 'TheCrasterX', 'Mae mia chico', '2021-05-11 23:43:10'),
+(71, 'TheCrasterX', 'Que no panda el cunico', '2021-05-11 23:43:22'),
+(72, 'TheCrasterX', 'A tomar por cleta la biciculo', '2021-05-11 23:43:31'),
+(73, 'TheCrasterX', 'ESO PARA TI JUANITO PARA TUS COSAS', '2021-05-11 23:43:56'),
+(74, 'TheCrasterX', 'Getafe sigue siendo una aldea', '2021-05-11 23:44:12');
 
 -- --------------------------------------------------------
 
@@ -97,7 +104,7 @@ ALTER TABLE `only_users`
 -- AUTO_INCREMENT de la tabla `only_post`
 --
 ALTER TABLE `only_post`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT de la tabla `only_users`

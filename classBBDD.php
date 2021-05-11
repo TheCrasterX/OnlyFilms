@@ -75,14 +75,15 @@ session_start();
             }
         }
     }
-//Esta funcion nos permite publicar los mensajes de los usuarios y registrarlos en la bbdd
-//En algun punto de la funcion se queda almacenado el comentario y comienza a repetirse y a insertarlo varias veces
     if(isset($_POST['publicar'])) {
         $publicacion = $_POST['publicacion'];
         $sql = "INSERT INTO only_post (usuario, comentario, fecha) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."', SYSDATE())";
         $MyBBDD->consulta($sql);
         unset($publicacion);
-        unset($_POST['publicacion']);
+        echo "<form action='index.php' method='post'> 
+            <h1>POST PUBLICADO CON ÉXITO</h1>
+            <input type='submit' name='volver' value='Volver a la pagina principal'><br>
+            </form>";//A este texto se le podria dar un poco de estilo para que no quede cutre
     }
 ?>
     

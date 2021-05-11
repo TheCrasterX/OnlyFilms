@@ -39,7 +39,7 @@
     <section class="sectionprincipal">
         <h1>Formulario de registro</h1>
         <section id="section1">
-            <form class="form" action="classBBDD.php" method="POST">
+            <form class="form" action="index.php" method="POST">
                 <hr>
                 <legend>Regístrate</legend><br><br>
                 <input type="text" name="user" placeholder="Usuario" require></input><br><br>

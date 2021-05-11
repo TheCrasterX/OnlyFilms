@@ -15,7 +15,7 @@
     <div class="navegador">
         <nav id="navUno">
             <img id="logo" src="logo.png">
-            <p><a href="index.html">Inicio</a></p>
+            <p><a href="index.php">Inicio</a></p>
             <p><a href="#">Perfil</a></p>
             <p><a href="#">Miembros</a></p>
             <p><a href="#">Grupos</a></p>
@@ -46,7 +46,7 @@
             <div id="preguntaUsuario">
                 <img src="#">
                 <?php
-                    echo '<form action="index.php" method="post">';
+                    echo '<form action="classBBDD.php" method="post">';
                     echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
@@ -57,8 +57,11 @@
                 echo'<br>';
                 ?>
             <?php
-                if (isset($_POST['actualizar']) || isset($_POST['publicar'])) {
+            //Esta funcion nos permite publicar los mensajes de los usuarios y registrarlos en la bbdd
+            //En algun punto de la funcion se queda almacenado el comentario y comienza a repetirse y a insertarlo varias veces     
+            
                     $arrayPost = array();
+                    $arrayAutorPost = array();
                     $sql='SELECT comentario FROM only_post ORDER BY fecha DESC';
                     $MyBBDD->consulta($sql);
                     while ($fila = $MyBBDD->extraer_registro()) {
@@ -66,15 +69,21 @@
                             array_push($arrayPost, $valor);
                         }
                     }
-                    for ($i=0; $i < count($arrayPost) ; $i++) { 
-                        echo '<div class="navegador"><img src="#"><p>'.$arrayPost[$i].'</p></div>';//Tamara da estilo a la clase navegador para poner los post como tu quieras
+                    $sql='SELECT usuario FROM only_post ORDER BY fecha DESC';
+                    $MyBBDD->consulta($sql);
+                    while ($fila = $MyBBDD->extraer_registro()) {
+                        foreach ($fila as $indice => $valor) {
+                            array_push($arrayAutorPost, $valor);
+                        }
+                    }
+                    /*Tamara da estilo a la clase navegador para poner los post como tu quieras y coloca las cosas de su interior como quieras
+                    fijate que te he dejado ya las clases escritas y todo*/
+                    for ($i=0; $i < 9 ; $i++) { 
+                        echo '<div class="navegador"><img src="#"><p class="autorPost">Por '.$arrayAutorPost[$i].'</p><p class="post">'.$arrayPost[$i].'</p></div>';
                         echo '<br>';
                     }
-                    unset($arrayPost);
-                }
-                    
                 ?>
-            <div class="peli">
+            <!--<div class="peli">
                 <p class="titulo">Titulo pelicula</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus quos rerum alias? Cum veniam,
                     numquam quaerat nam voluptatum hic quos incidunt dignissimos iure, ullam, soluta culpa suscipit.
@@ -88,18 +97,26 @@
                 <button class="botones">Like</button>
                 <button class="botones">Dislike</button>
                 <button class="botones">Comentar</button>
-            </div>
+            </div>-->
         </div>
         <div id="divSpanDerecha">
             <span>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis reiciendis ea tenetur eaque, hic
-                doloribus repellendus ab eveniet harum temporibus laboriosam eius voluptates molestias aperiam
-                exercitationem voluptate adipisci dolore alias?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illo optio laudantium magnam labore
-                vitae ipsum nemo, ducimus ea temporibus libero placeat nesciunt veritatis tempore mollitia unde incidunt
-                expedita accusantium!
+                <?php
+                $arrayPersonas = array();
+                $sql='SELECT usuario FROM only_users';
+                $MyBBDD->consulta($sql);
+                while ($fila = $MyBBDD->extraer_registro()) {
+                    foreach ($fila as $indice => $valor) {
+                        array_push($arrayPersonas, $valor);
+                    }
+                }
+                for ($i=0; $i < 4 ; $i++) { 
+                    echo '<div class="navegador"><img src="#"><p>'.$arrayPersonas[$i].'</p></div>';
+                    echo '<br>';
+                }
+                ?>
             </span>
         </div>
     </div>
