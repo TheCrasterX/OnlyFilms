@@ -16,13 +16,11 @@
         <nav id="navUno">
             <img id="logo" src="logo.png">
             <p><a href="index.php">Inicio</a></p>
-            <p><a href="#">Perfil</a></p>
+            <p><a href="perfil.php">Perfil</a></p>
             <p><a href="#">Miembros</a></p>
             <p><a href="#">Grupos</a></p>
-            <p><img id="mensaje" src="lupa.png">
-            </p>
-            <p><img id="mensaje" src="mensaje.png">
-            </p>
+            <p><img id="mensaje" src="lupa.png"></p>
+            <p><img id="mensaje" src="mensaje.png"></p>
             <p><img id="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
         </nav>
     </div>
@@ -122,7 +120,7 @@
         </div>
     </div>
     <footer>
-        <div id="divfo">Contacto ¿Quienes somos? Legal</div>
+        <div id="divfo"><a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
     </footer>
 </body>
 

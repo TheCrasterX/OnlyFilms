@@ -3,27 +3,8 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos_principales.css">
     <title>Login</title>
-    <style type="text/css">
- .sectionprincipal{
-    
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 5%;
-}
-#section1{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(236, 236, 134);
-}
-@media all and (max-width: 300px) {
-    .sectionprincipal{
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-top: 0%;
-    }
-}
-  </style>
 </head>
 
 <body>

@@ -2,6 +2,7 @@ body{
     background-color: #5e5e5e;;
 }
 #navUno{
+    position: fixed;
     display: flex;
     justify-content: end;
     width: 100%;
@@ -29,26 +30,26 @@ p a{
 }
 
 .navegador{
-     display: flex;
-     justify-content: center;
-     width: 100%;
-     background-color: grey;
- }
- #navDos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: grey;
+}
+#navDos{
     display: flex;
     justify-content: start;
     width: 100%;
     background-color: black;
     border: 1px solid black;
     margin-bottom: 2px;
- }
+}
 
- #actividad{
+#actividad{
     font-size: x-large;
     padding-left: 5%;
     color:white;
- }
- #spanes {
+}
+#spanes {
     display: flex;
     margin: 2em;
     background-color: #5e5e5e;
@@ -57,7 +58,7 @@ p a{
     flex-direction: column;
     align-items: center;
 }
- #spanes #preguntaUsuario {
+#spanes #preguntaUsuario {
     background-color: black;
     width: 100%;
     margin: 3px;
@@ -140,4 +141,22 @@ footer{
     border: 1px solid black;
     color: white;
     font-family: calibri;
+}
+.sectionprincipal{
+    
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+#section1{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(236, 236, 134);
+}
+@media all and (max-width: 300px) {
+    .sectionprincipal{
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+    }
 }
