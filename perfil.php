@@ -14,7 +14,7 @@
 <body>
     <div class="navegador">
         <nav class="navUno">
-            <img class="logo" src="#" alt="Foto de perfil">
+        <img class="logo" src="logo.png">
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="#">Miembros</a></p>
@@ -23,6 +23,10 @@
             <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
         </nav>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+        FOTO DE PERFIL MAYBE?
     </div>
     <div class="navegador">
         <nav class="navDos">

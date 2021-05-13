@@ -12,37 +12,37 @@
 </head>
 <body>
     <div class="navegador">
-        <nav id="navUno">
-            <img id="logo" src="logo.png">
+        <nav class="navUno">
+            <img class="logo" src="logo.png">
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
             <p><a href="#">Grupos</a></p>
-            <p><img id="mensaje" src="lupa.png"></p>
-            <p><img id="mensaje" src="mensaje.png"></p>
-            <p><img id="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
+            <p><img class="mensaje" src="lupa.png"></p>
+            <p><img class="mensaje" src="mensaje.png"></p>
+            <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
         </nav>
     </div>
     <div class="navegador">
-        <nav id="navDos">
-            <p id="actividad">Actividad</p>
+        <nav class="navDos">
+            <p class="actividad">Actividad</p>
         </nav>
     </div>
     <br>
-    <div id="todo">
-        <div id="parteIzq">
-            <div id="divIzquierda">
-                <h2 id="divfo">Online</h2>
+    <div class="todo">
+        <div class="parteIzq">
+            <div class="divIzquierda">
+                <h2 class="divfo">Online</h2>
                 <hr>
             </div>
-            <div id="divIzquierda">
-                <h2 id="divfo">Miembros recientes</h2>
+            <div class="divIzquierda">
+                <h2 class="divfo">Miembros recientes</h2>
                 <hr>
             </div>
         </div>
         
-        <div id="spanes">
-            <div id="preguntaUsuario">
+        <div class="spanes">
+            <div class="preguntaUsuario">
                 <img src="#">
                 <?php
                     echo '<form action="classBBDD.php" method="post">';
@@ -98,7 +98,7 @@
                 <button class="botones">Comentar</button>
             </div>-->
         </div>
-        <div id="divSpanDerecha">
+        <div class="divSpanDerecha">
             <span>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
@@ -121,7 +121,7 @@
         </div>
     </div>
     <footer>
-        <div id="divfo"><a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
+        <div class="divfo"><a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
     </footer>
 </body>
 
