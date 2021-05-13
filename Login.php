@@ -10,7 +10,7 @@
 <body>
 <section class="sectionprincipal">
   <h2>¿Eres ya usuario?</h2>
-    <section id="section1">
+    <section class="section1">
     <form action="index.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
     <hr>
       <h2>Login</h2>
@@ -20,7 +20,7 @@
         <hr>
     </form>
   </section>
-  <section id="section1">
+  <section class="section1">
     <form action="register.php" method="post"> <!-- Indico que los datos se procesarán en register.php si no está registrado para que le llevé a la página donde se rellenan dichos datos-->
       <p>¿Aún no eres usuario? <input type="submit" value="Crear cuenta"></p>
     </form>
