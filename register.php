@@ -38,7 +38,7 @@
     <!--Creamos un formulario que envía los datos a index.php, este formulario contiene los campos que después almacenaremos en index.php en las cookies.-->
     <section class="sectionprincipal">
         <h1>Formulario de registro</h1>
-        <section class="section1">
+        <section id="section1">
             <form class="form" action="index.php" method="POST">
                 <hr>
                 <legend>Regístrate</legend><br><br>
