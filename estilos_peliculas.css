@@ -1,0 +1,72 @@
+body {
+    background-color: #ee6523f2;
+}
+
+.tablaPelis {
+    background-color: #fdbf06;;
+    border: 1px solid black;
+    width: 90%;
+    margin-bottom: 3em;
+}
+
+th {
+    font-size: large;
+}
+
+tr th {
+    background-color: #0b0a0a;
+    color: #fdbf06;
+}
+
+td {
+    border: 1px solid black;
+    height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bbb5b5;
+}
+
+.navUno {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    border: 1px solid black;
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+.navUno p {
+    padding-right: 5%;
+}
+
+p a {
+    color: white;
+}
+
+.mensaje {
+    width: 122%;
+    height: 18px;
+}
+
+.logo {
+    width: 14%;
+    height: 7em;
+    margin-right: 31%;
+    margin-left: 3%;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#divTablas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ee6523f2;
+}
