@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-<?php
-    include('classBBDD.php');
+    <?php
+        include('classBBDD.php');
     ?>
 <head>
     <meta charset="UTF-8">
@@ -41,10 +41,21 @@
         </div>
         <div class="spanes">
             <div class="preguntaUsuario">
-            <p class="actividad">Comentarios de ESTE perfil, aquí va una función con PHP</p>
+            <p class="actividad"></p>
                 <?php
-                
-                //METER AQUÍ COMENTARIOS DEL USUARIO QUE ESTÁ CONECTADO
+                    $arrayPost = array();
+                    $sql='SELECT comentario FROM only_post WHERE usuario="'.$_SESSION['UsuarioIniciado'].'" ORDER BY fecha DESC';
+                    $MyBBDD->consulta($sql);
+                    while ($fila = $MyBBDD->extraer_registro()) {
+                        foreach ($fila as $indice => $valor) {
+                            array_push($arrayPost, $valor);
+                        }
+                    }
+
+                    for ($i=0; $i < count($arrayPost) ; $i++) { 
+                        echo '<p class="post"> '.$arrayPost[$i].'</p>';
+                        echo '<br>';
+                    }
                 ?>
             </div>
                 <?php

@@ -56,8 +56,7 @@
                 echo'<br>';
                 ?>
             <?php
-            //Esta funcion nos permite publicar los mensajes de los usuarios y registrarlos en la bbdd
-            //En algun punto de la funcion se queda almacenado el comentario y comienza a repetirse y a insertarlo varias veces     
+            //Esta funcion nos permite publicar los mensajes de los usuarios y registrarlos en la bbdd  
             
                     $arrayPost = array();
                     $arrayAutorPost = array();
@@ -82,21 +81,6 @@
                         echo '<br>';
                     }
                 ?>
-            <!--<div class="peli">
-                <p class="titulo">Titulo pelicula</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus quos rerum alias? Cum veniam,
-                    numquam quaerat nam voluptatum hic quos incidunt dignissimos iure, ullam, soluta culpa suscipit.
-                    Dignissimos, distinctio?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus quos rerum alias? Cum veniam,
-                    numquam quaerat nam voluptatum hic quos incidunt dignissimos iure, ullam, soluta culpa suscipit.
-                    Dignissimos, distinctio?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus quos rerum alias? Cum veniam,
-                    numquam quaerat nam voluptatum hic quos incidunt dignissimos iure, ullam, soluta culpa suscipit.
-                    Dignissimos, distinctio?</p>
-                <button class="botones">Like</button>
-                <button class="botones">Dislike</button>
-                <button class="botones">Comentar</button>
-            </div>-->
         </div>
         <div class="divSpanDerecha">
             <span>
