@@ -50,8 +50,6 @@ session_start();
             </form>";
             $_SESSION['UsuarioIniciado'] = $_POST['user'];
             $_SESSION['ContraUsuario'] = $_POST['pass'];
-            echo $_SESSION['UsuarioIniciado'];
-            echo $_SESSION['ContraUsuario'];
     }
     /*Esta función no permite iniciar sesion con un usuario que no exista en la bbdd y se cuelga por ello*/
     if(isset($_POST['entrar'])){
