@@ -78,7 +78,7 @@
                     /*Tamara da estilo a la clase navegador para poner los post como tu quieras y coloca las cosas de su interior como quieras
                     fijate que te he dejado ya las clases escritas y todo*/
                     for ($i=0; $i < 9 ; $i++) { 
-                        echo '<div class="navegador"><img src="#"><p class="autorPost">Por '.$arrayAutorPost[$i].'</p><p class="post">'.$arrayPost[$i].'</p></div>';
+                        echo '<div class="navegador"><img src="#"><p class="autorPost">Por '.$arrayAutorPost[$i].'</p><p class="post"> '.$arrayPost[$i].'</p></div>';
                         echo '<br>';
                     }
                 ?>
