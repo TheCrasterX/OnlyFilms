@@ -40,7 +40,7 @@ include('classBBDD.php');
         }
         echo '<form action="classBBDD.php" method="post">';
         for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="#">' . $arrayTitulo[$i] . '</td></tr>';
+            echo '<tr><td><a href="pelicula.html">' . $arrayTitulo[$i] . '</td></tr>';
         }
         unset($arrayTitulo);
         ?>
@@ -60,7 +60,7 @@ include('classBBDD.php');
         }
         echo '<form action="classBBDD.php" method="post">';
         for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="#">' . $arrayTitulo[$i] . '</td></tr>';
+            echo '<tr><td><a href="pelicula.html">' . $arrayTitulo[$i] . '</td></tr>';
         }
         /*$arrayImagenes = array();
     $sql='SELECT Foto FROM only_films';
@@ -89,7 +89,7 @@ include('classBBDD.php');
         }
         echo '<form action="classBBDD.php" method="post">';
         for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="#">' . $arrayTitulo[$i] . '</td></tr>';
+            echo '<tr><td><a href="pelicula.html">' . $arrayTitulo[$i] . '</td></tr>';
         }
         unset($arrayTitulo);
         ?>
@@ -108,7 +108,7 @@ include('classBBDD.php');
         }
         echo '<form action="classBBDD.php" method="post">';
         for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="#">' . $arrayTitulo[$i] . '</td></tr>';
+            echo '<tr><td><a href="pelicula.html">' . $arrayTitulo[$i] . '</td></tr>';
         }
         unset($arrayTitulo);
         ?>
