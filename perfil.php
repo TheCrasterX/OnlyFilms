@@ -17,7 +17,7 @@
         <img class="logo" src="logo.png">
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
-            <p><a href="#">Miembros</a></p>
+            <p><a href="peliculas.php">Peliculas</a></p>
             <p><a href="#">Grupos</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
             <p><img class="mensaje" src="mensaje.png"></p>
@@ -26,12 +26,7 @@
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <div>
-        FOTO DE PERFIL MAYBE?
-    </div>
-    <div class="navegador">
-        <nav class="navDos">
-            <p class="actividad">Comentarios de ESTE perfil, aquí va una función con PHP</p>
-        </nav>
+        <img src="#" class="fotoPerfil">
     </div>
     <div class="todo">
         <div class="parteIzq">
@@ -46,17 +41,14 @@
         </div>
         <div class="spanes">
             <div class="preguntaUsuario">
-                <img src="#">
+            <p class="actividad">Comentarios de ESTE perfil, aquí va una función con PHP</p>
                 <?php
-                    echo '<form action="classBBDD.php" method="post">';
-                    echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
-                    echo $_SESSION['UsuarioIniciado'];
-                    echo '?"></textarea>';
-                    echo '<input type="submit" value="Publicar" name="publicar"></form>';
+                
+                //METER AQUÍ COMENTARIOS DEL USUARIO QUE ESTÁ CONECTADO
                 ?>
             </div>
                 <?php
-                echo'<br>';
+                //echo'<br>';
                 ?>
         </div>
         <div class="divSpanDerecha">
