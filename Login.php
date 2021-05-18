@@ -9,14 +9,14 @@
 
 <body>
 <section class="sectionprincipal">
-  <h2>¿Eres ya usuario?</h2>
+  <h1>Bienvenido a OnlyFilms</h1>
     <section class="section1">
     <form action="classBBDD.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
     <hr>
-      <h2>Login</h2>
-        <input type="text" name="user" placeholder="Usuario" require=""><br><br> <!-- Pido usuario y contraseña -->
-        <input type="password" name="pass" placeholder="Contraseña" require=""><br><br>
-        <input type="submit" name="entrar" value="Entrar"> <!-- Creo botón de entrar si ya está registrado -->
+      <h3>Login</h3>
+        <input type="text" name="user" placeholder="Usuario" required size="31"><br><br> <!-- Pido usuario y contraseña -->
+        <input type="password" name="pass" placeholder="Contraseña" required size="32"><br><br>
+        <input type="submit" name="entrar" value="Entrar" class="enter"> <!-- Creo botón de entrar si ya está registrado -->
         <hr>
     </form>
   </section>

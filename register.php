@@ -4,34 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos_principales.css">
     <title>register.php</title>
-    <style>
-        .sectionprincipal {
-            margin-left: 20%;
-            margin-right: 20%;
-            margin-top: 5%;
-        }
-
-        #section1 {
-            background-color: rgb(236, 236, 134);
-            display: flex;
-            justify-content: center;
-        }
-
-        legend {
-            float: left;
-            font-weight: bold;
-        }
-
-        @media all and (max-width: 300px) {
-            .sectionprincipal {
-                margin-left: 0%;
-                margin-right: 0%;
-                margin-top: 0%;
-            }
-
-        }
-    </style>
 </head>
 
 <body>
@@ -40,14 +14,15 @@
         <h1>Formulario de registro</h1>
         <section class="section1">
             <form class="form" action="index.php" method="POST">
+                <br>
                 <hr>
-                <legend>Regístrate</legend><br><br>
-                <input type="text" name="user" placeholder="Usuario" require></input><br><br>
-                <input type="password" name="pass" placeholder="Contraseña" require></input><br><br>
-                <input type="text" name="email" placeholder="Email" require><br><br>
-                <input type="date" name="birthDate" require><br><br>
+                <input type="text" name="user" placeholder="Usuario" required size="31"></input><br><br>
+                <input type="password" name="pass" placeholder="Contraseña" required size="32"></input><br><br>
+                <input type="text" name="email" placeholder="Email" required size="31"><br><br>
+                <input type="date" name="birthDate" placeholder = "fecha de nacimiento" required size="31"><br>
                 <hr>
                 <input type="submit" value="Registrar" name="registrar">
+                <br><br>
             </form>
         </section>
     </section>
