@@ -11,7 +11,7 @@
 <section class="sectionprincipal">
   <h1>Bienvenido a OnlyFilms</h1>
     <section class="section1">
-    <form action="index.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
+    <form action="classBBDD.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
     <hr>
       <h3>Login</h3>
         <input type="text" name="user" placeholder="Usuario" required size="31"><br><br> <!-- Pido usuario y contraseña -->
