@@ -17,7 +17,7 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
-            <p><a href="#">Grupos</a></p>
+            <p><a href="login.php">Cerrar Sesión</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
             <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
@@ -88,14 +88,14 @@
                 <hr>
                 <?php
                 $arrayPersonas = array();
-                $sql='SELECT usuario FROM only_users';
+                $sql='SELECT usuario FROM only_users WHERE usuario !="'.$_SESSION['UsuarioIniciado'].'"';
                 $MyBBDD->consulta($sql);
                 while ($fila = $MyBBDD->extraer_registro()) {
                     foreach ($fila as $indice => $valor) {
                         array_push($arrayPersonas, $valor);
                     }
                 }
-                for ($i=0; $i < 4 ; $i++) { 
+                for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
                     echo '<div class="navegador"><img src="#"><p class="personaRecomendada">'.$arrayPersonas[$i].'</p></div>';
                     echo '<br>';

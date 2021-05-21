@@ -45,9 +45,6 @@ session_start();
     if(isset($_POST['registrar'])) {
         $sql = "INSERT INTO only_users (usuario, pass, email, fechNacimiento) VALUES ('".$_POST['user']."','".$_POST['pass']."','".$_POST['email']."', '".$_POST['birthDate']."')";
         $MyBBDD->consulta($sql);
-        echo "<form action='index.php' method='post'>
-            <input type='submit' name='perfil' value='Perfil'><br>
-            </form>";
             $_SESSION['UsuarioIniciado'] = $_POST['user'];
             $_SESSION['ContraUsuario'] = $_POST['pass'];
     }

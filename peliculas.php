@@ -19,7 +19,7 @@ include('classBBDD.php');
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
-            <p><a href="#">Grupos</a></p>
+            <p><a href="login.php">Cerrar Sesión</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
             <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
@@ -31,16 +31,12 @@ include('classBBDD.php');
         <th>PELÍCULAS DE ACCIÓN</th>
         <?php
         $arrayTitulo = array();
-        $sql = 'SELECT titulo FROM only_films WHERE genero="Accion"';
+        $sql = 'SELECT * FROM only_films WHERE genero="Accion"';
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
-            foreach ($fila as $indice => $valor) {
-                array_push($arrayTitulo, $valor);
-            }
-        }
-        echo '<form action="classBBDD.php" method="post">';
-        for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="pelicula.php">' . $arrayTitulo[$i] . '</td></tr>';
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -51,28 +47,13 @@ include('classBBDD.php');
         <th>PELÍCULAS DE TERROR</th>
         <?php
         $arrayTitulo = array();
-        $sql = 'SELECT titulo FROM only_films WHERE genero="Terror"';
+        $sql = 'SELECT * FROM only_films WHERE genero="Terror"';
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
-            foreach ($fila as $indice => $valor) {
-                array_push($arrayTitulo, $valor);
-            }
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
-        echo '<form action="classBBDD.php" method="post">';
-        for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="pelicula.php">' . $arrayTitulo[$i] . '</td></tr>';
-        }
-        /*$arrayImagenes = array();
-    $sql='SELECT Foto FROM only_films';
-    $MyBBDD->consulta($sql);
-    while ($fila = $MyBBDD->extraer_registro()) {
-        foreach ($fila as $indice => $valor) {
-            array_push($arrayImagenes, $valor);
-        }
-    }*/
-        /*for ($i=0; $i < count($arrayImagenes); $i++) { 
-        echo '<img src="'.$arrayImagenes[$i].'">';
-    }*/
         ?>
     </table>
     <table class="tablaPelis">
@@ -80,16 +61,12 @@ include('classBBDD.php');
         <th>PELÍCULAS DE FICCIÓN</th>
         <?php
         $arrayTitulo = array();
-        $sql = 'SELECT titulo FROM only_films WHERE genero="Ciencia Ficcion"';
+        $sql = 'SELECT * FROM only_films WHERE genero="Ciencia Ficcion"';
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
-            foreach ($fila as $indice => $valor) {
-                array_push($arrayTitulo, $valor);
-            }
-        }
-        echo '<form action="classBBDD.php" method="post">';
-        for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="pelicula.php">' . $arrayTitulo[$i] . '</td></tr>';
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -99,16 +76,42 @@ include('classBBDD.php');
         <th>PELÍCULAS ROMANTICAS</th>
         <?php
         $arrayTitulo = array();
-        $sql = 'SELECT titulo FROM only_films WHERE genero="Romantica"';
+        $sql = 'SELECT * FROM only_films WHERE genero="Romantica"';
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
-            foreach ($fila as $indice => $valor) {
-                array_push($arrayTitulo, $valor);
-            }
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
-        echo '<form action="classBBDD.php" method="post">';
-        for ($i = 0; $i < count($arrayTitulo); $i++) {
-            echo '<tr><td><a href="pelicula.php">' . $arrayTitulo[$i] . '</td></tr>';
+        unset($arrayTitulo);
+        ?>
+    </table>
+    <table class="tablaPelis">
+        <!--AQUI GENERO LA LISTA DE PELICULAS MUSICALES -->
+        <th>MUSICALES</th>
+        <?php
+        $arrayTitulo = array();
+        $sql = 'SELECT * FROM only_films WHERE genero="Musical"';
+        $MyBBDD->consulta($sql);
+        while ($fila = $MyBBDD->extraer_registro()) {
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+        }
+        unset($arrayTitulo);
+        ?>
+    </table>
+    <table class="tablaPelis">
+        <!--AQUI GENERO LA LISTA DE PELICULAS DE MISTERIO -->
+        <th>PELICULAS DE MISTERIO</th>
+        <?php
+        $arrayTitulo = array();
+        $sql = 'SELECT * FROM only_films WHERE genero="Misterio"';
+        $MyBBDD->consulta($sql);
+        while ($fila = $MyBBDD->extraer_registro()) {
+            $id = $fila['id'];
+            $titulo = $fila['Titulo'];
+            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>

@@ -26,27 +26,60 @@ include('classBBDD.php');
     </div>
     <div id="divPrincipal">
         <div class="titulo">
-            <h1>Titulo de la película</h1>
+            <?php
+            $idPelicula = $_GET['id'];
+            $sql = "SELECT titulo FROM only_films WHERE id= $idPelicula";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                $titulo = $fila['titulo'];
+                echo "<h1>$titulo</h1>";
+            }
+            ?>
         </div>
         <div class="genero">
-            <h3>Género: género de la película</h3>
+        <?php
+            $idPelicula = $_GET['id'];
+            $sql = "SELECT genero FROM only_films WHERE id= $idPelicula";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                $genero = $fila['genero'];
+                echo "<h3>Género: $genero</h3>";
+            }
+            ?>
         </div>
         <div class="divSecundario"> 
-            <img class="imgPelicula" src="https://www.dacostabalboa.com/es/imagenes/calidad-peliculas.jpg" alt="OnlyFilms">
-            <p class="sinopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio esse consectetur
-                ipsum nihil omnis, repudiandae consequuntur earum accusamus quas, ratione fuga voluptatem voluptatum,
-                eveniet doloremque quam ex quibusdam quo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia velit asperiores veritatis quam! Similique
-                aspernatur rerum sint enim incidunt, quo asperiores? Quia nihil molestias repellat illum fugit error
-                impedit recusandae.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum autem nobis reiciendis quas iusto
-                blanditiis quia quos ut. Eum soluta pariatur deserunt corporis modi illo debitis veniam officiis est
-                excepturi.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque quibusdam vel aut, eum ipsa
-                libero eos voluptatem hic, tempora officia quam rem optio quasi beatae aliquid enim repudiandae tempore.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, perspiciatis. Vitae molestias dolores
-                ducimus ad rerum architecto iure ab, corrupti odio quae repudiandae, eos voluptatum quia quis? Earum,
-                commodi illo.</p>
+        <?php
+            $idPelicula = $_GET['id'];
+            $sql = "SELECT foto FROM only_films WHERE id= $idPelicula";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                $foto = $fila['foto'];
+                echo "<img class='imgPelicula' src='$foto' alt='OnlyFilms'>";
+            }
+            ?>
+            
+            <?php
+            /*$arrayImagenes = array();
+    $sql='SELECT Foto FROM only_films';
+    $MyBBDD->consulta($sql);
+    while ($fila = $MyBBDD->extraer_registro()) {
+        foreach ($fila as $indice => $valor) {
+            array_push($arrayImagenes, $valor);
+        }
+    }*/
+        /*for ($i=0; $i < count($arrayImagenes); $i++) { 
+        echo '<img src="'.$arrayImagenes[$i].'">';
+    }*/
+    ?>
+    <?php
+            $idPelicula = $_GET['id'];
+            $sql = "SELECT sinopsis FROM only_films WHERE id= $idPelicula";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                $sinopsis = $fila['sinopsis'];
+                echo "<p class='sinopsis'>$sinopsis</p>";
+            }
+            ?>
         </div>
     </div>
     <div id="divTercero">
