@@ -61,10 +61,6 @@ session_start();
                         echo "<form action='index.php' method='post'>
                             <input type='submit' name='perfil' value='Perfil'><br>
                             </form>";
-                    } else {
-                        echo "<form action='login.php' method='post'>
-                            <input type='submit' name='login' value='Volver a login'><br>
-                            </form>";
                     }
                 }
             }
