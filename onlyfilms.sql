@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-05-2021 a las 17:13:24
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.3.14
+-- Tiempo de generación: 21-05-2021 a las 13:48:51
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +31,7 @@ CREATE TABLE `only_films` (
   `id` int(5) NOT NULL,
   `Titulo` varchar(80) NOT NULL,
   `Foto` varchar(500) DEFAULT NULL,
-  `Sinopsis` varchar(500) DEFAULT NULL,
+  `Sinopsis` varchar(1500) DEFAULT NULL,
   `Genero` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,14 +40,18 @@ CREATE TABLE `only_films` (
 --
 
 INSERT INTO `only_films` (`id`, `Titulo`, `Foto`, `Sinopsis`, `Genero`) VALUES
-(1, 'Salvar al soldado Ryan', 'https://es.web.img3.acsta.net/pictures/14/03/05/09/42/163621.jpg', 'Tras el desembarco de Normandía durante la Segunda Guerra Mundial, donde murieron muchos combatientes aliados, un grupo de soldados americanos es elegido para llevar a cabo su última misión: salvar a un solo hombre que se encuentra al otro lado de las líneas enemigas.', 'Accion'),
+(1, 'Salvar al soldado Ryan', 'https://static2.abc.es/media/historia/2018/02/15/salvar-soldado-ryan-principal-error-historico-kpAB--1240x698@abc.jpg', 'Tras el desembarco de Normandía durante la Segunda Guerra Mundial, donde murieron muchos combatientes aliados, un grupo de soldados americanos es elegido para llevar a cabo su última misión: salvar a un solo hombre que se encuentra al otro lado de las líneas enemigas.', 'Accion'),
 (2, 'El resplandor', 'https://static2.elcorreo.com/www/multimedia/202005/25/media/cortadas/el-resplandor-kKKH-U1102973139567IB-624x385@RC.jpg', 'La película relata la historia de Jack Torrance, un exprofesor que acepta un puesto como vigilante de invierno en un solitario hotel de alta montaña para ocuparse del mantenimiento. Al poco tiempo de haberse instalado allí junto con su esposa y su hijo, empieza a sufrir inquietantes trastornos de personalidad.', 'Terror'),
-(3, 'The Fast and the Furious', 'https://images-na.ssl-images-amazon.com/images/I/71qtDoM-rcL._SY679_.jpg', 'La vida de Dominic Toretto (Vin Diesel) está marcada día y noche por la velocidad. Durante el día prepara y tunea coches de carreras de alta gama, mejora sus prestaciones y los embellece. ... Rápidamente se ganará la confianza de Toretto, pero todo se complicará cuando aparezca su hermana y se enamora de ella.', 'Accion'),
+(3, 'The Fast and the Furious', 'https://media.revistagq.com/photos/5ca6020df552a1574932f520/16:9/w_1920,c_limit/a_todo_gas_fast_furious_gq_3785.jpg', 'Una misteriosa banda de delincuentes se dedica a robar camiones en marcha desde vehículos deportivos. La policía decide infiltrar un hombre en el mundo de las carreras ilegales para descubrir posibles sospechosos. El joven y apuesto Brian entra en el mundo del tunning donde conoce a Dominic, rey indiscutible de este mundo y sospechoso número uno, pero todo se complicará cuando se enamore de su hermana', 'Accion'),
 (4, 'Alien: el octavo pasajero', 'https://pics.filmaffinity.com/Alien_el_octavo_pasajero-172055367-large.jpg', 'La nave Nostromo se dirige a la Tierra tras una misión convencional de extracción minera con sus tripulantes en estado de hibernación. Sin embargo, el ordenador principal decide despertarlos antes de tiempo ante la recepción de una señal desconocida.', 'Ciencia Ficción'),
 (5, 'El diario de Noa', 'https://i.blogs.es/4c2684/the-notebook-netflix-cambia-el-final/840_560.jpg', 'El libro cuenta la vida de Noah Calhoun y Allie Nelson, dos jóvenes adolescentes de Carolina del Norte que, a pesar de vivir en dos ambientes sociales muy diferentes, pasan un verano idílico juntos y profundamente enamorados, antes de ser separados, primero por sus padres, y más tarde por la Segunda Guerra Mundial.', 'Romantica'),
-(6, 'Regreso al futuro', 'https://pics.filmaffinity.com/Regreso_al_futuro-139415628-large.jpg', 'La cinta transcurre en el año 1985, una época en la que el joven Marty McFly lleva una existencia anónima con su novia Jennifer. Los únicos problemas son su familia en crisis y un director al que le encantaría expulsarle del instituto, por lo que deberá hacer todo lo que esté en su mano para revertir esa situación y aparentar total normalidad. Amigo del excéntrico profesor Emmett Brown, una noche le acompaña a probar su nuevo experimento: viajar en el tiempo usando un DeLorean modificado. Sin du', 'Ciencia Ficcion'),
+(6, 'Regreso al futuro', 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2015/06/12/14341214930928.jpg', 'La cinta transcurre en el año 1985, una época en la que el joven Marty McFly lleva una existencia anónima con su novia Jennifer. Los únicos problemas son su familia en crisis y un director al que le encantaría expulsarle del instituto, por lo que deberá hacer todo lo que esté en su mano para revertir esa situación y aparentar total normalidad. Amigo del excéntrico profesor Emmett Brown, una noche le acompaña a probar su nuevo experimento: viajar en el tiempo usando un DeLorean modificado. Sin duda alguna, se trata de una investigación realmente arriesgada pero que puede aportarles un enorme éxito en el futuro. No obstante, la prueba sale aún peor de lo esperado: unos traficantes de armas llegan y asesinan al científico. Marty se refugia en el coche y aparece transportado hasta 1955. Allí impide, a su pesar, que sus padres se conozcan y se verá en la obligación de hacer lo necesario para que vuelvan juntos. De lo contrario, él jamás podrá regresar al momento actual debido a que nunca habrá existido.', 'Ciencia Ficcion'),
 (7, 'Psicosis', 'https://lh3.googleusercontent.com/proxy/0QLf0WbhAPsg1l9cGQCbbDyRhpI372GCHaxscfpuL3Fnqq72UjTW8yEQVpMkH7c3VLj7XpX9fRpfNYP8vDJoQXlLHu8QXNCq7ji0h3xbIkP3o_xOr2b6CgVi1HJFy0bj', 'Inspirada en la novela homónima de Robert Bloch, la historia está ambientada en un tétrico motel de carretera llamado cuyo dueño es Norman Bates (Anthony Perkins, \'Asesinato en el Orient Express\'). Junto al motel hay una casa, tan poco acogedora como el edificio, en la que reside el señor Bates con su madre.', 'Terror'),
-(8, 'Leyendas de Pasión', 'https://r4.abcimg.es/resizer/resizer.php?imagen=https%3A%2F%2Fstatic1.abc.es%2Fmedia%2Fpeliculas%2F000%2F000%2F006%2Fleyendas-de-pasion-1.jpg&nuevoancho=690&medio=abc', 'William Ludlow (Anthony Hopkins), un coronel abandonado por su mujer, ha criado a sus tres hijos en su gran rancho de Montana, a los pies de las Montañas Rocosas. La Primera Guerra Mundial (1914-1918) y una bella mujer cambiarán el destino de todos ellos para siempre. Sus hijos son el indómito Tristan (Brad Pitt), el sensato Alfred (Aidan Quinn) y Samuel (Henry Thomas), el menor, que acaba de traer al rancho a su bella prometida Susannah (Julia Ormond).', 'Romantica');
+(8, 'Leyendas de Pasión', 'https://1.bp.blogspot.com/-KxnBdTaXK_E/XeN5N98q-HI/AAAAAAAAAxE/PZ4JAlRjWR4k8JaWUV3Ws0JLHeTOCKYNwCLcBGAsYHQ/s1600/Leyendas%2Bbxe%2Bpasi%25C3%25B3n.jpg', 'William Ludlow (Anthony Hopkins), un coronel abandonado por su mujer, ha criado a sus tres hijos en su gran rancho de Montana, a los pies de las Montañas Rocosas. La Primera Guerra Mundial (1914-1918) y una bella mujer cambiarán el destino de todos ellos para siempre. Sus hijos son el indómito Tristan (Brad Pitt), el sensato Alfred (Aidan Quinn) y Samuel (Henry Thomas), el menor, que acaba de traer al rancho a su bella prometida Susannah (Julia Ormond).', 'Romantica'),
+(9, 'La La Land', 'https://img.eldefinido.cl/portadas/650/2017-01-20-6814YWF3752.jpg', 'La película cuenta la historia de Mia, una empleada de un bar que aspira a ser una gran actriz y Sebastian, un pianista de jazz desempleado con grandes ambiciones. A pesar de sus diferencias y sus distintas personalidades, gracias a una serie de acontecimientos harán que sus caminos acaben cruzándose.', 'Musical'),
+(10, 'Grease', 'https://s.libertaddigital.com/2014/11/07/1920/1080/fit/grease.jpg', 'Al término de las vacaciones de verano, los novios Danny Zuko y Sandy Olsson, una joven australiana de buena familia, se ven obligados a separarse. A su regreso al instituto Rydell, el joven se reúne con su banda, los T-birds, de chaquetas de cuero y pelo engominado. Los padres de Sandy deciden mudarse a Estados Unidos y la chica ingresa en el mismo colegio. Pasada la sorpresa del reencuentro y con el objetivo de quedar bien delante de sus compañeros, Danny adopta una actitud arrogante que deja a la joven totalmente desamparada. Sandy se une entonces a las Pink Ladies, la contraparte femenina de los T-Birds. Entonces tiene lugar un juego del gato y el ratón entre los dos tortolitos, todo ello marcado por los acontecimientos de sus vidas estudiantiles: el comienzo de la temporada de fútbol, el baile de promoción, carreras de coches, noches de chicas, de chicos, salidas al \"fast-food\", al autocine...', 'Musical'),
+(11, 'Seven', 'https://i1.wp.com/cinefilosoficial.com/wp-content/uploads/2020/09/se7en.jpg?fit=1300%2C730&ssl=1', 'El veterano teniente Somerset (Morgan Freeman), del departamento de homicidios, está a punto de jubilarse y ser reemplazado por el ambicioso e impulsivo detective David Mills (Brad Pitt). Ambos tendrán que colaborar en la resolución de una serie de asesinatos cometidos por un psicópata que toma como base la relación de los siete pecados capitales: gula, pereza, soberbia, avaricia, envidia, lujuria e ira. Los cuerpos de las víctimas, sobre los que el asesino se ensaña de manera impúdica, se convertirán para los policías en un enigma que les obligará a viajar al horror y la barbarie más absoluta.', 'Misterio'),
+(12, 'Memento', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/memento-pelicula-polaroid-1532823991.jpg', 'La memoria de Leonard, un investigador de una agencia de seguros, está irreversiblemente dañada debido a un golpe sufrido en la cabeza cuando intentaba evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. La memoria reciente la ha perdido: los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar e intentar vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.', 'Misterio');
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,10 @@ INSERT INTO `only_users` (`id`, `usuario`, `pass`, `email`, `fechNacimiento`) VA
 (2, 'Rayzor', 'elpepe', 'elraul@gmail.com', '1997-10-22'),
 (6, 'Lottor24', 'pechofrio', 'pechofrio@gmail.es', '1996-06-23'),
 (8, 'Mario', '123', 'mario_martin_garcia@hotmail.es', '1931-04-14'),
-(9, 'Periquito', '123', 'periquito@lafuente.com', '1111-11-11');
+(9, 'Periquito', '123', 'periquito@lafuente.com', '1111-11-11'),
+(11, 'Paco', '123', '1_@iesjovellanos.org', '3232-02-23'),
+(12, 'Tamara', '123', 'tamichuli@lafortuna.com', '2222-02-22'),
+(13, 'Jorge', '123', 'jorgitolvp@gmail.es', '1999-03-21');
 
 --
 -- Índices para tablas volcadas
@@ -139,7 +145,7 @@ ALTER TABLE `only_users`
 -- AUTO_INCREMENT de la tabla `only_films`
 --
 ALTER TABLE `only_films`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `only_post`
@@ -151,7 +157,7 @@ ALTER TABLE `only_post`
 -- AUTO_INCREMENT de la tabla `only_users`
 --
 ALTER TABLE `only_users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
