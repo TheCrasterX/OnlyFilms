@@ -1,5 +1,11 @@
 <?php
 session_start();
+echo  '<script>
+window.onload=function(){
+            // Una vez cargada la página, el formulario se enviara automáticamente.
+    document.forms["miformulario"].submit();
+}
+</script>';
     class BBDD {
         private $servidor;
         private $user;
@@ -58,8 +64,7 @@ session_start();
             while ($fila = $MyBBDD->extraer_registro()) {
                 foreach ($fila as $indice => $valor) {
                     if($valor ==  $_SESSION['ContraUsuario']) {
-                        echo "<form action='index.php' method='post'>
-                            <input type='submit' name='perfil' value='Perfil'><br>
+                        echo "<form name='miformulario' action='index.php' method='post'>
                             </form>";
                     } else {
                         echo "<form action='login.php' method='post'>
