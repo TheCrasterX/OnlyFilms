@@ -14,7 +14,7 @@
     <form action="classBBDD.php" method="post"> <!-- Indico que los datos se procesarán en index.php -->
     <hr>
       <h3>Login</h3>
-        <input type="text" name="user" placeholder="Usuario" required size="31"><br><br> <!-- Pido usuario y contraseña -->
+        <input type="text" name="user" placeholder="Usuario" required size="32"><br><br> <!-- Pido usuario y contraseña -->
         <input type="password" name="pass" placeholder="Contraseña" required size="32"><br><br>
         <input type="submit" name="entrar" value="Entrar" class="enter"> <!-- Creo botón de entrar si ya está registrado -->
         <hr>

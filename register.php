@@ -16,10 +16,10 @@
             <form class="form" action="index.php" method="POST">
                 <br>
                 <hr>
-                <input type="text" name="user" placeholder="Usuario" required size="31"></input><br><br>
+                <input type="text" name="user" placeholder="Usuario" required size="32"></input><br><br>
                 <input type="password" name="pass" placeholder="Contraseña" required size="32"></input><br><br>
-                <input type="text" name="email" placeholder="Email" required size="31"><br><br>
-                <input type="date" name="birthDate" placeholder = "fecha de nacimiento" required size="31"><br>
+                <input type="text" name="email" placeholder="Email" required size="32"><br><br>
+                <input type="date" name="birthDate" placeholder = "fecha de nacimiento" required size="32"><br>
                 <hr>
                 <input type="submit" value="Registrar" name="registrar">
                 <br><br>
