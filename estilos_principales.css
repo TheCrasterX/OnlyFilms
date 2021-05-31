@@ -190,6 +190,10 @@ legend {
     justify-content: center;
     background-color: black;
 }
+.divfo a {
+    color: white;
+    text-decoration: none;
+}
 
 @media all and (max-width: 300px) {
     .sectionprincipal {
