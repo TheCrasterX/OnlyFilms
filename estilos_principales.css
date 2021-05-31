@@ -104,6 +104,15 @@ nav a {
     padding: 10px;
 }
 
+.feedPerfil {
+    box-sizing: content-box;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+}
+
 textarea {
     width: 80%;
     padding: 5px;
@@ -168,14 +177,16 @@ footer {
 }
 
 .sectionprincipal {
-    
+
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 5%;
 }
+
 legend {
     color: white;
 }
+
 .enter {
 
     margin: 0 auto;
@@ -190,6 +201,7 @@ legend {
     justify-content: center;
     background-color: black;
 }
+
 .divfo a {
     color: white;
     text-decoration: none;

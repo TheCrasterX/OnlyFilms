@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="spanes">
-            <div class="preguntaUsuario">
+            <div class="feedPerfil">
             <p class="actividad"></p>
                 <?php
                     $arrayPost = array();
