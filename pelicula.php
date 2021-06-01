@@ -94,7 +94,26 @@ include('classBBDD.php');
             </div>
     </div>
     <div class="divComentarios">
+    <?php
+        $idPelicula = $_GET['id'];
+        $sql = "SELECT comentario FROM only_post
+        where id_peli = " . $idPelicula;
+        $MyBBDD->consulta($sql);
+        while ($fila = $MyBBDD->extraer_registro()) {
+            $comentario = $fila['comentario'];
+            echo '<p>'. $comentario .'</p>';
+        }
 
+        if(isset($_POST['publicar'])) {
+            $idPelicula = $_GET['id'];
+            var_dump($idPelicula);
+            $publicacion = $_POST['publicacion'];
+            $sql = "INSERT INTO 'only_post'('usuario', 'comentario', 'id_peli') VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','". $idPelicula ."')";
+            $MyBBDD->consulta($sql);
+            unset($publicacion);
+        }
+
+    ?>
     </div>
 </body>
 
