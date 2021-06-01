@@ -86,5 +86,17 @@ window.onload=function(){
             <input type='submit' name='volver' value='Volver a la pagina principal'><br>
             </form>";//A este texto se le podria dar un poco de estilo para que no quede cutre
     }
+    if(isset($_POST['comentar'])) {
+        $idPelicula = $_SESSION['idPelicula'];
+        var_dump($idPelicula);
+        $publicacion = $_POST['publicacion'];
+        $sql = "INSERT INTO only_post (usuario, comentario, id_peli) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','".$idPelicula."')";
+        $MyBBDD->consulta($sql);
+        unset($publicacion);
+        echo "<form action='peliculas.php' method='post'> 
+        <h1>POST PUBLICADO CON ÉXITO</h1>
+        <input type='submit' name='volver' value='Volver a la lista de peliculas'><br>
+        </form>";
+    }
 ?>
     

@@ -18,7 +18,7 @@ include('classBBDD.php');
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
-            <p><a href="#">Grupos</a></p>
+            <p><a href="login.php">Cerrar Sesión</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
             <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
@@ -28,6 +28,7 @@ include('classBBDD.php');
         <div class="titulo">
             <?php
             $idPelicula = $_GET['id'];
+            $_SESSION['idPelicula'] = $idPelicula;
             $sql = "SELECT titulo FROM only_films WHERE id= $idPelicula";
             $MyBBDD->consulta($sql);
             while ($fila = $MyBBDD->extraer_registro()) {
@@ -89,32 +90,21 @@ include('classBBDD.php');
                     echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
-                    echo '<input type="submit" value="Publicar" name="publicar"></form>';
+                    echo '<input type="submit" value="Publicar" name="comentar"></form>';
                 ?>
             </div>
     </div>
     <div class="divComentarios">
     <?php
         $idPelicula = $_GET['id'];
-        $sql = "SELECT comentario FROM only_post
-        where id_peli = " . $idPelicula;
+        $sql = "SELECT usuario, comentario FROM only_post WHERE id_peli = " .$idPelicula;
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
+            $usuario = $fila ['usuario'];
             $comentario = $fila['comentario'];
-            echo '<p>'. $comentario .'</p>';
+            echo '<p>'.$usuario .': '. $comentario .'</p>';
         }
-
-        if(isset($_POST['publicar'])) {
-            $idPelicula = $_GET['id'];
-            var_dump($idPelicula);
-            $publicacion = $_POST['publicacion'];
-            $sql = "INSERT INTO 'only_post'('usuario', 'comentario', 'id_peli') VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','". $idPelicula ."')";
-            $MyBBDD->consulta($sql);
-            unset($publicacion);
-        }
-
     ?>
     </div>
 </body>
-
 </html>

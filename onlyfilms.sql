@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2021 a las 20:02:56
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.3.14
+-- Tiempo de generación: 01-06-2021 a las 21:54:04
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -97,7 +96,18 @@ INSERT INTO `only_post` (`id`, `usuario`, `comentario`, `fecha`, `id_peli`) VALU
 (114, 'tamaraAH4', 'jiji', '2021-06-01 19:33:51', 0),
 (115, 'tamaraAH4', 'dd', '2021-06-01 19:35:48', 1),
 (116, 'tamaraAH4', 'ff', '2021-06-01 19:41:45', 0),
-(117, 'tamaraAH4', 'tamara', '2021-06-01 19:46:24', 0);
+(117, 'tamaraAH4', 'tamara', '2021-06-01 19:46:24', 0),
+(118, 'Mario', 'dasdasdsadas', '2021-06-01 20:23:02', 0),
+(119, 'Mario', 'dadad', '2021-06-01 20:24:14', 0),
+(120, 'Mario', 'dadadadadadadada', '2021-06-01 20:24:52', 0),
+(121, 'Mario', 'Tremendo peliculon bb <3', NULL, 1),
+(122, 'Mario', 'tremeeeeeendo', '2021-06-01 21:07:07', 0),
+(123, 'Mario', 'gdfggdfgdg', '0000-00-00 00:00:00', 0),
+(124, 'Mario', 'gdgdfgdfgdg', NULL, 1),
+(125, 'Mario', 'vaya peliculita bbs', NULL, 1),
+(126, 'Mario', 'Tremendo peliculon maquinas', NULL, 3),
+(127, 'Mario', 'Demasiado azúcar para mi cuerpo', NULL, 5),
+(128, 'TheCrasterX', 'pff y que lo digas chaval', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -167,7 +177,7 @@ ALTER TABLE `only_films`
 -- AUTO_INCREMENT de la tabla `only_post`
 --
 ALTER TABLE `only_post`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT de la tabla `only_users`
