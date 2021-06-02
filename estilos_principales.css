@@ -1,6 +1,5 @@
 body {
     background-color: #5e5e5e;
-    ;
 }
 
 h1,
@@ -111,6 +110,7 @@ nav a {
     border-radius: 5px;
     display: flex;
     padding: 10px;
+    flex-direction: column;
 }
 
 textarea {
@@ -163,6 +163,13 @@ footer {
 .todo {
     display: flex;
     justify-content: center;
+}
+
+.divComentarios{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 5px; 
 }
 
 .divIzquierda {

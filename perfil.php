@@ -24,7 +24,7 @@
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
         </nav>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
     <div>
         <img src="#" class="fotoPerfil">
     </div>
@@ -40,8 +40,7 @@
             </div>
         </div>
         <div class="spanes">
-            <div class="feedPerfil">
-            <p class="actividad"></p>
+            <div class="feedPerfil"> <!-- Añadir un título para los comentarios de uno mismo -->
                 <?php
                     $arrayPost = array();
                     $sql='SELECT comentario FROM only_post WHERE usuario="'.$_SESSION['UsuarioIniciado'].'" ORDER BY fecha DESC';
@@ -53,8 +52,9 @@
                     }
 
                     for ($i=0; $i < count($arrayPost) ; $i++) { 
+                        echo '<div class="divComentarios">';
                         echo '<p class="post"> '.$arrayPost[$i].'</p>';
-                        echo '<br>';
+                        echo '</div>';    
                     }
                 ?>
             </div>
@@ -62,7 +62,7 @@
                 //echo'<br>';
                 ?>
         </div>
-        <div class="divSpanDerecha">
+        <div class="divSpanDerecha"> <!-- Esto hay que arreglarlo para que ocupe de largo solo lo que contenga-->
             <span>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
@@ -83,7 +83,7 @@
             </span>
         </div>
     </div>
-    <footer>
+    <footer> <!-- Hay que hacer que se quede abajo el footer fijo-->
         <div class="divfo"> <a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
     </footer>
 </body>
