@@ -2,7 +2,6 @@
 session_start();
 echo  '<script>
 window.onload=function(){
-            // Una vez cargada la página, el formulario se enviara automáticamente.
     document.forms["miformulario"].submit();
 }
 </script>';
@@ -88,7 +87,6 @@ window.onload=function(){
     }
     if(isset($_POST['comentar'])) {
         $idPelicula = $_SESSION['idPelicula'];
-        var_dump($idPelicula);
         $publicacion = $_POST['publicacion'];
         $sql = "INSERT INTO only_post (usuario, comentario, id_peli) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','".$idPelicula."')";
         $MyBBDD->consulta($sql);
