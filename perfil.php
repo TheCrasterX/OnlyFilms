@@ -83,7 +83,7 @@
             </span>
         </div>
     </div>
-    <footer> <!-- Hay que hacer que se quede abajo el footer fijo-->
+    <footer class="perfil"> <!-- Hay que hacer que se quede abajo el footer fijo-->
         <div class="divfo"> <a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
     </footer>
 </body>
