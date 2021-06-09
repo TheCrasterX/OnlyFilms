@@ -18,10 +18,9 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
-            <p><a href="login.php">Cerrar Sesión</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
+            <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
     </div>
     <div class="navegador">

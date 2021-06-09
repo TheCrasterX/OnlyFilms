@@ -82,6 +82,7 @@ window.onload=function(){
         unset($publicacion);
         echo "<form action='index.php' method='post'>
         <link rel='stylesheet' type='text/css' href='estilos_principales.css'> 
+        <title>OnlyFilms</title>
             <body class = 'bodyPost'>
             <h1>POST PUBLICADO CON ÉXITO</h1><br>
             <input type='submit' name='volver' value='Volver a la pagina principal'><br>
@@ -96,6 +97,7 @@ window.onload=function(){
         unset($publicacion);
         echo "<form action='peliculas.php' method='post'> 
         <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
+        <title>OnlyFilms</title>
             <body class = 'bodyPost'>
             <h1>POST PUBLICADO CON ÉXITO</h1><br>
             <input type='submit' name='volver' value='Volver a la lista de peliculas'><br>

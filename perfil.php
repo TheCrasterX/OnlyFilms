@@ -19,10 +19,9 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Peliculas</a></p>
-            <p><a href="login.php">Cerrar Sesión</a></p>
             <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="mensaje.png"></p>
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
+            <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
     </div>
     <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
@@ -31,10 +30,6 @@
     </div>
     <div class="todo">
         <div class="parteIzq">
-            <div class="divIzquierda">
-                <h2 class="divfo">Online</h2>
-                <hr>
-            </div>
             <div class="divIzquierda">
                 <h2 class="divfo">Miembros recientes</h2>
                 <hr>
