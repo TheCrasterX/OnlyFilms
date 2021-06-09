@@ -6,6 +6,15 @@ h1,
 h3 {
     text-align: center;
 }
+.bodyPost{
+    background: linear-gradient(70deg, #dd6014, #19d0ee87);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+}
 
 .navUno {
     display: flex;
@@ -36,19 +45,9 @@ p a {
     margin-right: 31%;
     margin-left: 3%;
 }
-.post{
-    display: flex;
-}
 
 .navegador {
     display: flex;
-    justify-content: left;
-    width: 100%;
-    background-color: grey;
-}
-.navegador2 {
-    display: flex;
-    justify-content: center;
     width: 100%;
     background-color: grey;
 }
@@ -130,6 +129,7 @@ textarea {
     margin-right: 2em;
     border-radius: 20px;
 }
+
 
 .botones {
     float: right;

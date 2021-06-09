@@ -80,10 +80,13 @@ window.onload=function(){
         $sql = "INSERT INTO only_post (usuario, comentario, fecha) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."', SYSDATE())";
         $MyBBDD->consulta($sql);
         unset($publicacion);
-        echo "<form action='index.php' method='post'> 
-            <h1>POST PUBLICADO CON ÉXITO</h1>
+        echo "<form action='index.php' method='post'>
+        <link rel='stylesheet' type='text/css' href='estilos_principales.css'> 
+            <body class = 'bodyPost'>
+            <h1>POST PUBLICADO CON ÉXITO</h1><br>
             <input type='submit' name='volver' value='Volver a la pagina principal'><br>
-            </form>";//A este texto se le podria dar un poco de estilo para que no quede cutre
+            </body>
+        </form>";
     }
     if(isset($_POST['comentar'])) {
         $idPelicula = $_SESSION['idPelicula'];
@@ -92,8 +95,11 @@ window.onload=function(){
         $MyBBDD->consulta($sql);
         unset($publicacion);
         echo "<form action='peliculas.php' method='post'> 
-        <h1>POST PUBLICADO CON ÉXITO</h1>
-        <input type='submit' name='volver' value='Volver a la lista de peliculas'><br>
+        <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
+            <body class = 'bodyPost'>
+            <h1>POST PUBLICADO CON ÉXITO</h1><br>
+            <input type='submit' name='volver' value='Volver a la lista de peliculas'><br>
+            </body>
         </form>";
     }
 ?>
