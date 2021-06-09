@@ -36,8 +36,17 @@ p a {
     margin-right: 31%;
     margin-left: 3%;
 }
+.post{
+    display: flex;
+}
 
 .navegador {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    background-color: grey;
+}
+.navegador2 {
     display: flex;
     justify-content: center;
     width: 100%;
