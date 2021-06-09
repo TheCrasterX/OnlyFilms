@@ -32,10 +32,6 @@
     <div class="todo">
         <div class="parteIzq">
             <div class="divIzquierda">
-                <h2 class="divfo">Online</h2>
-                <hr>
-            </div>
-            <div class="divIzquierda">
                 <h2 class="divfo">Miembros recientes</h2>
                 <hr>
             </div>
