@@ -33,6 +33,7 @@
         <div class="parteIzq">
             <div class="divIzquierda">
                 <h2 class="divfo">Miembros recientes</h2>
+                <!--Aquí meter el PHP de los ultimos 5 miembros o algo así-->
                 <hr>
             </div>
         </div>
@@ -74,7 +75,7 @@
                     /*Tamara da estilo a la clase navegador para poner los post como tu quieras y coloca las cosas de su interior como quieras
                     fijate que te he dejado ya las clases escritas y todo*/
                     for ($i=0; $i < 9 ; $i++) { 
-                        echo '<div class="navegador"><img src="#"><p class="autorPost">'.$arrayAutorPost[$i].':</p><p class="post"> <br>'.$arrayPost[$i].'</p></div>';
+                        echo '<div class="navegador"><img src="#"><p class="autorPost">'.$arrayAutorPost[$i].':</p><p class="post"> <br>'.$arrayPost[$i].'</p></div><hr>';
                         echo '<br>';
                     }
                 ?>

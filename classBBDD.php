@@ -66,7 +66,8 @@ window.onload=function(){
                         echo "<form name='miformulario' action='index.php' method='post'>
                             </form>";
                     } else {
-                        echo "<form action='login.php' method='post'>
+                        echo "<form action='Login.php' method='post'>
+                            <link rel='icon' type='image/png' href='favicon.ico'>
                             <input type='submit' name='login' value='volver a login'><br>
                             </form>";
                     }
@@ -81,7 +82,8 @@ window.onload=function(){
         $MyBBDD->consulta($sql);
         unset($publicacion);
         echo "<form action='index.php' method='post'>
-        <link rel='stylesheet' type='text/css' href='estilos_principales.css'> 
+        <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
+        <link rel='icon' type='image/png' href='favicon.ico'>
         <title>OnlyFilms</title>
             <body class = 'bodyPost'>
             <h1>POST PUBLICADO CON ÉXITO</h1><br>
@@ -97,6 +99,7 @@ window.onload=function(){
         unset($publicacion);
         echo "<form action='peliculas.php' method='post'> 
         <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
+        <link rel='icon' type='image/png' href='favicon.ico'>
         <title>OnlyFilms</title>
             <body class = 'bodyPost'>
             <h1>POST PUBLICADO CON ÉXITO</h1><br>

@@ -51,7 +51,12 @@ p a {
     width: 100%;
     background-color: grey;
 }
-
+.navegador2 {
+    text-align: center;
+    align-items:center;
+    width: 100%;
+    background-color: grey;
+}
 .navDos {
     display: flex;
     justify-content: start;
