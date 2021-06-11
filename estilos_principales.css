@@ -2,8 +2,7 @@ body {
     background-color: #5e5e5e;
 }
 
-h1,
-h3 {
+h1, h3 {
     text-align: center;
 }
 .bodyPost{
@@ -14,6 +13,10 @@ h3 {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: aquamarine;
+}
+
+.fotoPerfil {
+    
 }
 
 .navUno {

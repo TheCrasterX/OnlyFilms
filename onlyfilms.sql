@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2021 a las 21:54:04
+-- Tiempo de generación: 11-06-2021 a las 12:32:38
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -107,7 +107,8 @@ INSERT INTO `only_post` (`id`, `usuario`, `comentario`, `fecha`, `id_peli`) VALU
 (125, 'Mario', 'vaya peliculita bbs', NULL, 1),
 (126, 'Mario', 'Tremendo peliculon maquinas', NULL, 3),
 (127, 'Mario', 'Demasiado azúcar para mi cuerpo', NULL, 5),
-(128, 'TheCrasterX', 'pff y que lo digas chaval', NULL, 1);
+(128, 'TheCrasterX', 'pff y que lo digas chaval', NULL, 1),
+(129, 'Mario', 'Buenisima esa', '2021-06-11 11:52:05', 0);
 
 -- --------------------------------------------------------
 
@@ -120,23 +121,24 @@ CREATE TABLE `only_users` (
   `usuario` varchar(30) NOT NULL,
   `pass` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `fechNacimiento` date NOT NULL
+  `fechNacimiento` date NOT NULL,
+  `fotoPerfil` varchar(2000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `only_users`
 --
 
-INSERT INTO `only_users` (`id`, `usuario`, `pass`, `email`, `fechNacimiento`) VALUES
-(1, 'TheCrasterX', '123', 'mario_martin_garcia@hotmail.es', '1997-04-13'),
-(2, 'Rayzor', 'elpepe', 'elraul@gmail.com', '1997-10-22'),
-(6, 'Lottor24', 'pechofrio', 'pechofrio@gmail.es', '1996-06-23'),
-(8, 'Mario', '123', 'mario_martin_garcia@hotmail.es', '1931-04-14'),
-(9, 'Periquito', '123', 'periquito@lafuente.com', '1111-11-11'),
-(11, 'Paco', '123', '1_@iesjovellanos.org', '3232-02-23'),
-(12, 'Tamara', '123', 'tamichuli@lafortuna.com', '2222-02-22'),
-(13, 'Jorge', '123', 'jorgitolvp@gmail.es', '1999-03-21'),
-(15, 'tamaraAH4', 'tamara', 'tamaraaroca44@gmail.com', '1994-10-14');
+INSERT INTO `only_users` (`id`, `usuario`, `pass`, `email`, `fechNacimiento`, `fotoPerfil`) VALUES
+(1, 'TheCrasterX', '123', 'mario_martin_garcia@hotmail.es', '1997-04-13', 'https://aux2.iconspalace.com/uploads/387811467132324889.png'),
+(2, 'Rayzor', 'elpepe', 'elraul@gmail.com', '1997-10-22', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(6, 'Lottor24', 'pechofrio', 'pechofrio@gmail.es', '1996-06-23', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(8, 'Mario', '123', 'mario_martin_garcia@hotmail.es', '1931-04-14', 'https://aux2.iconspalace.com/uploads/387811467132324889.png'),
+(9, 'Periquito', '123', 'periquito@lafuente.com', '1111-11-11', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(11, 'Paco', '123', '1_@iesjovellanos.org', '3232-02-23', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(12, 'Tamara', '123', 'tamichuli@lafortuna.com', '2222-02-22', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(13, 'Jorge', '123', 'jorgitolvp@gmail.es', '1999-03-21', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg'),
+(15, 'tamaraAH4', 'tamara', 'tamaraaroca44@gmail.com', '1994-10-14', 'https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -177,7 +179,7 @@ ALTER TABLE `only_films`
 -- AUTO_INCREMENT de la tabla `only_post`
 --
 ALTER TABLE `only_post`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT de la tabla `only_users`

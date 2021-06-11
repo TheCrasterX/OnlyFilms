@@ -26,7 +26,22 @@
     </div>
     <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
     <div>
-        <img src="#" class="fotoPerfil">
+    <?php 
+//<img src="#" class="fotoPerfil">
+        $arrayFoto = array();
+        $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$_SESSION['UsuarioIniciado'].'"';
+        $MyBBDD->consulta($sql);
+        while ($fila = $MyBBDD->extraer_registro()) {
+            foreach ($fila as $indice => $valor) {
+                array_push($arrayFoto, $valor);
+            }
+        }
+
+        for ($i=0; $i < count($arrayFoto) ; $i++) { 
+            echo "<img src=".$arrayFoto[$i]." class='fotoPerfil'>";
+        }
+    ?>
+        
     </div>
     <div class="todo">
         <div class="parteIzq">

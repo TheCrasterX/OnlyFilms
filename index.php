@@ -72,10 +72,30 @@
                             array_push($arrayAutorPost, $valor);
                         }
                     }
+                    /*Salen errores en la feed porque tengo que apañar que saque la foto de cada comentario mirando que usuario
+                    puso el post asi que este trozo de codigo lo tengo que retocar. Os lo dejo asi para que salga la foto de uno al menos
+                    y podais modificarlo*/
+                    $arrayFoto = array();
+                    for ($i=0; $i < 9 ; $i++) { 
+                        $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$arrayAutorPost[$i].'"';
+                        $MyBBDD->consulta($sql);
+                        while ($fila = $MyBBDD->extraer_registro()) {
+                            foreach ($fila as $indice => $valor) {
+                                array_push($arrayFoto, $valor);
+                            }
+                        }
+                    }
+                    
+
                     /*Tamara da estilo a la clase navegador para poner los post como tu quieras y coloca las cosas de su interior como quieras
                     fijate que te he dejado ya las clases escritas y todo*/
                     for ($i=0; $i < 9 ; $i++) { 
-                        echo '<div class="navegador"><img src="#"><p class="autorPost">'.$arrayAutorPost[$i].':</p><p class="post"> <br>'.$arrayPost[$i].'</p></div><hr>';
+                        echo '<div class="navegador">
+                                <img src="'.$arrayFoto[0].'"class="fotoPerfil">
+                                <p class="autorPost">'.$arrayAutorPost[$i].':</p>
+                                <p class="post"> <br>'.$arrayPost[$i].'</p>
+                            </div>
+                            <hr>';
                         echo '<br>';
                     }
                 ?>
