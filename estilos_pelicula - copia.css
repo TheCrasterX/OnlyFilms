@@ -1,0 +1,140 @@
+body {
+    background-color: #5e5e5e;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    /*Esto hay que quitarlo en el responsive para que aparezca la foto, titulo, etc*/
+}
+
+#divPrincipal {
+    background-color: grey;
+    width: 80%;
+    border: 15px ridge black;
+}
+
+.titulo {
+    background-color: black;
+    color: #fdbf06;
+    text-align: center;
+}
+
+.genero {
+    color: black;
+    width: max-content;
+    background-color: #1313132e;
+    border-radius: 5px;
+}
+
+.sinopsis {
+    background-color: #ee770e;
+    font-size: larger;
+    text-align: justify;
+}
+
+.divSecundario {
+    background-color: #ee770e;
+    border-radius: 10px;
+}
+
+.divSecundario>p {
+    border-radius: 10px;
+}
+
+div>.imgPelicula {
+    width: 25%;
+    height: 12em;
+    float: left;
+    border-radius: 10px;
+    margin-right: 0.5em;
+}
+
+#divPrincipal>div {
+    margin: 1%;
+    margin-right: 0.5em;
+}
+
+.divSecundario>p {
+    padding: 0 1em;
+}
+
+#divTercero {
+    background-color: black;
+    width: 80%;
+    display: flex;
+    margin: 3em;
+}
+
+div>textarea {
+    width: 90%;
+    margin: 0.5em;
+}
+
+.boton {
+    float: right;
+}
+
+.navUno {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    border: 1px solid black;
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+.navUno p {
+    padding-right: 5%;
+}
+
+p a {
+    color: white;
+}
+
+.mensaje {
+    width: 122%;
+    height: 18px;
+}
+
+.logo {
+    width: 14%;
+    height: 7em;
+    margin-right: 31%;
+    margin-left: 3%;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#preguntaUsuario {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 5em;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+#preguntaUsuario>img {
+    width: 7%;
+    height: 5em;
+}
+
+.divComentarios{
+    background-color: black;
+    color: white;
+    width: 80%;
+}

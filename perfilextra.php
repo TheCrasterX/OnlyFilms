@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Extra</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="es">
     <?php
         include('classBBDD.php');
     ?>
@@ -26,10 +35,18 @@
     </div>
     <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
     <div>
+    <?php
+            $idUsuario = $_GET['id'];
+            $sql = "SELECT usuario FROM only_users WHERE id= $idUsuario";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                $usuario = $fila['usuario'];
+                echo "<h1>Perfil de: $usuario</h1>";
+            }
+    ?>
     <?php 
-//<img src="#" class="fotoPerfil">
         $arrayFoto = array();
-        $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$_SESSION['UsuarioIniciado'].'"';
+        $sql="SELECT fotoPerfil FROM only_users WHERE id= $idUsuario";
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
             foreach ($fila as $indice => $valor) {
@@ -54,7 +71,7 @@
             <div class="feedPerfil"> <!-- Añadir un título para los comentarios de uno mismo -->
                 <?php
                     $arrayPost = array();
-                    $sql='SELECT comentario FROM only_post WHERE usuario="'.$_SESSION['UsuarioIniciado'].'" ORDER BY fecha DESC';
+                    $sql='SELECT comentario FROM only_post WHERE usuario="'.$usuario.'" ORDER BY fecha DESC';
                     $MyBBDD->consulta($sql);
                     while ($fila = $MyBBDD->extraer_registro()) {
                         foreach ($fila as $indice => $valor) {
@@ -73,30 +90,12 @@
                 //echo'<br>';
                 ?>
         </div>
-        <div class="divSpanDerecha"> <!-- Esto hay que arreglarlo para que ocupe de largo solo lo que contenga-->
-            <span>
-                <h2>Personas que quizá te interesen</h2>
-                <hr>
-                <?php
-                $arrayPersonas = array();
-                $sql='SELECT usuario FROM only_users';
-                $MyBBDD->consulta($sql);
-                while ($fila = $MyBBDD->extraer_registro()) {
-                    foreach ($fila as $indice => $valor) {
-                        array_push($arrayPersonas, $valor);
-                    }
-                }
-                for ($i=0; $i < 4 ; $i++) { 
-                    echo '<div class="navegador"><img src="#"><p class="personaRecomendada">'.$arrayPersonas[$i].'</p></div>';
-                    echo '<br>';
-                }
-                ?>
-            </span>
-        </div>
     </div>
     <footer class="perfil"> <!-- Hay que hacer que se quede abajo el footer fijo-->
         <div class="divfo"> <a href="#">Contacto <a href="#">¿Quiénes somos? <a href="#">Legal</div>
     </footer>
 </body>
 
+</html>
+</body>
 </html>
