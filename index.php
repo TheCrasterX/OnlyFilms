@@ -102,7 +102,7 @@
                 ?>
         </div>
         <div class="divSpanDerecha">
-            <span>
+            <div>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
                 <?php
@@ -122,7 +122,7 @@
                     echo '<br>';
                 }
                 ?>
-            </span>
+            </div>
         </div>
     </div>
     <footer>

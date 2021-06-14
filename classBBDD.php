@@ -68,6 +68,7 @@ window.onload=function(){
                     } else {
                         echo "<form action='Login.php' method='post'>
                             <link rel='icon' type='image/png' href='favicon.ico'>
+                            <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
                             <input type='submit' name='login' value='volver a login'><br>
                             </form>";
                     }
