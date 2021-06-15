@@ -15,6 +15,16 @@ h1, h3 {
     color: aquamarine;
 }
 
+.bodyDatosIncorrecto{
+    background: linear-gradient(70deg, black, white);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #dd6014;
+}
+
 .fotoPerfil {
     width: 20%;
 }

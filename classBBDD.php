@@ -66,10 +66,14 @@ window.onload=function(){
                         echo "<form name='miformulario' action='index.php' method='post'>
                             </form>";
                     } else if ($valor != $_SESSION['UsuarioIniciado'] || $valor != $_SESSION['ContraUsuario']){
-                        echo "<form action='Login.php' method='post'>
+                        echo "<form action='Login.php' method='post'> 
                             <link rel='icon' type='image/png' href='favicon.ico'>
                             <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
+                            <title>OnlyFilms</title>
+                            <body class = 'bodyDatosIncorrecto'>
+                            <h1>Usuario o contraseña incorrectos</h1><br>
                             <input type='submit' name='login' value='volver a login'><br>
+                            </body>
                             </form>";
                     }
                 }
@@ -109,4 +113,3 @@ window.onload=function(){
         </form>";
     }
 ?>
-    
