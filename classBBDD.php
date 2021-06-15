@@ -65,7 +65,7 @@ window.onload=function(){
                     if($valor ==  $_SESSION['ContraUsuario']) {
                         echo "<form name='miformulario' action='index.php' method='post'>
                             </form>";
-                    } else {
+                    } else if ($valor != $_SESSION['UsuarioIniciado'] || $valor != $_SESSION['ContraUsuario']){
                         echo "<form action='Login.php' method='post'>
                             <link rel='icon' type='image/png' href='favicon.ico'>
                             <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
