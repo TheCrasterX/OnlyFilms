@@ -33,7 +33,26 @@
         <div class="parteIzq">
             <div class="divIzquierda">
                 <h2 class="divfo">Miembros recientes</h2>
-                <!--Aquí meter el PHP de los ultimos 5 miembros o algo así-->
+                <?php
+                $arrayId = array();
+                $arrayUsuario = array();
+                $arrayFoto = array();
+                $sql='SELECT * FROM only_users WHERE usuario !="'.$_SESSION['UsuarioIniciado'].'"ORDER BY id DESC';
+                $MyBBDD->consulta($sql);
+                while ($fila = $MyBBDD->extraer_registro()) {
+                    $id = $fila['id'];
+                    $usuario = $fila['usuario'];
+                    $fotoPerfil = $fila['fotoPerfil'];
+                    array_push($arrayId, $id);
+                    array_push($arrayUsuario, $usuario);
+                    array_push($arrayFoto, $fotoPerfil);
+                }
+                for ($i=0; $i < 5 ; $i++) { 
+                    /*Aqui tambien puedes añadir estilos Tamara*/
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<br>';
+                }
+                ?>
                 <hr>
             </div>
         </div>
