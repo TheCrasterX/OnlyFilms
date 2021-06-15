@@ -135,6 +135,10 @@ nav a {
     margin-bottom: 5%;
 }
 
+.input{
+margin-left: 2%;
+} 
+
 .feedPerfil {
     box-sizing: content-box;
     width: 100%;

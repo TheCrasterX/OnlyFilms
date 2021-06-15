@@ -65,7 +65,7 @@
                     echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
-                    echo '<input type="submit" value="Publicar" name="publicar"></form>';
+                    echo '<input class="input" type="submit" value="Publicar" name="publicar"></form>';
                 ?>
             </div>
                 <?php
@@ -103,9 +103,6 @@
                         }
                     }
                     
-                    
-                    /*Tamara da estilo a la clase navegador para poner los post como tu quieras y coloca las cosas de su interior como quieras
-                    fijate que te he dejado ya las clases escritas y todo*/
                     for ($i=0; $i < 9 ; $i++) { 
                         echo '<div class="navegador">
                                 <img src="'.$arrayFoto[$i].'"class="fotoPerfil">

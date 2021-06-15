@@ -97,11 +97,11 @@ include('classBBDD.php');
     <div id="divTercero">
             <div id="preguntaUsuario">
             <?php 
-                    echo '<form action="classBBDD.php" method="post">';
+                    echo '<form action="classBBDD.php" method="post" style="width: 100%">';
                     echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';
                     echo $_SESSION['UsuarioIniciado'];
                     echo '?"></textarea>';
-                    echo '<input type="submit" value="Publicar" name="comentar"></form>';
+                    echo '<input class="input" type="submit" value="Publicar" name="comentar"></form>';
                 ?>
             </div>
     </div>
@@ -113,7 +113,9 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $usuario = $fila ['usuario'];
             $comentario = $fila['comentario'];
-            echo '<p>'.$usuario .': '. $comentario .'</p>';
+            echo '<div class="comentarioPelicula">';
+            echo '<p class="comentarioUsuario">'.$usuario . ': ' . '</p><p>'. $comentario .'</p></form>';
+            echo '</div>';
         }
     ?>
     </div>

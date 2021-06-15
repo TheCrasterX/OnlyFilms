@@ -8,8 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    /*Esto hay que quitarlo en el responsive para que aparezca la foto, titulo, etc*/
+    height: 100%; /*Esto hay que quitarlo en el responsive para que aparezca la foto, titulo, etc*/
 }
 
 #divPrincipal {
@@ -114,6 +113,14 @@ p a {
     width: 100%;
 }
 
+.input{
+    margin-left: 2%;
+}
+
+#preguntaUsuario textarea{
+    width: 89%;
+}
+
 nav a {
     text-decoration: none;
 }
@@ -137,4 +144,17 @@ nav a {
     background-color: black;
     color: white;
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #5e5e5e;
+}
+
+.comentarioPelicula{
+    background-color: black;
+    margin-bottom: 1%;
+    padding: 0 1%;
+}
+
+.comentarioUsuario{
+    color: #ee770e;
 }
