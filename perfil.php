@@ -69,25 +69,28 @@
                     }
                 ?>
             </div>
-                <?php
-                //echo'<br>';
-                ?>
         </div>
         <div class="divSpanDerecha"> <!-- Esto hay que arreglarlo para que ocupe de largo solo lo que contenga-->
             <span>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
                 <?php
-                $arrayPersonas = array();
-                $sql='SELECT usuario FROM only_users';
+                $arrayId = array();
+                $arrayUsuario = array();
+                $arrayFoto = array();
+                $sql='SELECT * FROM only_users WHERE usuario !="'.$_SESSION['UsuarioIniciado'].'"';
                 $MyBBDD->consulta($sql);
                 while ($fila = $MyBBDD->extraer_registro()) {
-                    foreach ($fila as $indice => $valor) {
-                        array_push($arrayPersonas, $valor);
-                    }
+                    $id = $fila['id'];
+                    $usuario = $fila['usuario'];
+                    $fotoPerfil = $fila['fotoPerfil'];
+                    array_push($arrayId, $id);
+                    array_push($arrayUsuario, $usuario);
+                    array_push($arrayFoto, $fotoPerfil);
                 }
-                for ($i=0; $i < 4 ; $i++) { 
-                    echo '<div class="navegador"><img src="#"><p class="personaRecomendada">'.$arrayPersonas[$i].'</p></div>';
+                for ($i=0; $i < 5 ; $i++) { 
+                    /*Aqui tambien puedes añadir estilos Tamara*/
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>

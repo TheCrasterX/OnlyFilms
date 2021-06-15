@@ -72,9 +72,6 @@
                             array_push($arrayAutorPost, $valor);
                         }
                     }
-                    /*Salen errores en la feed porque tengo que apañar que saque la foto de cada comentario mirando que usuario
-                    puso el post asi que este trozo de codigo lo tengo que retocar. Os lo dejo asi para que salga la foto de uno al menos
-                    y podais modificarlo*/
                     $arrayFoto = array();
                     for ($i=0; $i < 9 ; $i++) { 
                         $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$arrayAutorPost[$i].'"';
@@ -118,7 +115,7 @@
                 }
                 for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="#"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>
