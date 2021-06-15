@@ -10,7 +10,7 @@ include('classBBDD.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos_peliculas.css">
     <link rel="icon" type="image/png" href="favicon.ico">
-    <title>Peliculas</title>
+    <title>Peliculas / Onlyfilms</title>
 </head>
 
 <body id="bodyPelis">

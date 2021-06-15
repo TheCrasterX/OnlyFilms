@@ -59,7 +59,21 @@
         
         <div class="spanes">
             <div class="preguntaUsuario">
-                <img src="#">
+            <?php
+                $arrayFoto = array();
+                for ($i=0; $i < 9 ; $i++) { 
+                    $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$_SESSION['UsuarioIniciado'].'"';
+                    $MyBBDD->consulta($sql);
+                    while ($fila = $MyBBDD->extraer_registro()) {
+                        foreach ($fila as $indice => $valor) {
+                            array_push($arrayFoto, $valor);
+                            //var_dump($valor);
+                        }
+                    }
+                }
+
+                echo '<img src="'.$arrayFoto[0].'"class="fotoPerfil">';
+            ?>
                 <?php
                     echo '<form action="classBBDD.php" method="post">';
                     echo '<textarea rows="3" cols="90" name="publicacion" placeholder="¿Qué hay de nuevo ';

@@ -107,14 +107,24 @@ include('classBBDD.php');
     </div>
     <div class="divComentarios">
     <?php
+        $arrayUsuarios = array();
+        $arrayComentarios = array();
         $idPelicula = $_GET['id'];
-        $sql = "SELECT usuario, comentario FROM only_post WHERE id_peli = " .$idPelicula;
+        $sql = "SELECT usuario, comentario FROM only_post WHERE id_peli = " .$idPelicula." ORDER BY fecha DESC";
         $MyBBDD->consulta($sql);
         while ($fila = $MyBBDD->extraer_registro()) {
             $usuario = $fila ['usuario'];
             $comentario = $fila['comentario'];
-            echo '<div class="comentarioPelicula">';
+            array_unshift($arrayUsuarios, $usuario);
+            array_unshift($arrayComentarios, $comentario);
+            /*echo '<div class="comentarioPelicula">';
             echo '<p class="comentarioUsuario">'.$usuario . ': ' . '</p><p>'. $comentario .'</p></form>';
+            echo '</div>';*/
+        }
+
+        for ($i=0; $i < count($arrayComentarios); $i++) { 
+            echo '<div class="comentarioPelicula">';
+            echo '<p class="comentarioUsuario">'.$arrayUsuarios[$i] . ': ' . '</p><p>'. $arrayComentarios[$i] .'</p></form>';
             echo '</div>';
         }
     ?>
