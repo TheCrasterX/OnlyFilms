@@ -15,16 +15,6 @@ h1, h3 {
     color: aquamarine;
 }
 
-.bodyDatosIncorrecto{
-    background: linear-gradient(70deg, black, white);
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #dd6014;
-}
-
 .fotoPerfil {
     width: 20%;
 }
@@ -51,7 +41,15 @@ p a {
     width: 122%;
     height: 18px;
 }
-
+.bodyDatosIncorrecto{
+        background: linear-gradient(70deg, black, white);
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #dd6014;	
+    }
 .logo {
     width: 14%;
     height: 7em;
@@ -154,14 +152,14 @@ textarea {
 }
 
 .divSpanDerecha {
-    display: flex;
     float: right;
-    width: auto;
+    width: 15%;
     height: 10%;
     border-radius: 5px;
     background-color: black;
     border: 1px solid black;
     margin-top: 4em;
+    margin-left: 4em;
     color: white;
     font-family: calibri;
 }
@@ -203,9 +201,7 @@ footer.perfil {
 }
 
 .divIzquierda {
-    margin-right: 2em;
-    margin-bottom: 2em;
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
     background-color: black;
     border: 1px solid black;
