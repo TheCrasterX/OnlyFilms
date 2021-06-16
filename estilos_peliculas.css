@@ -3,7 +3,7 @@ body {
 }
 
 .tablaPelis {
-    background-color: #fdbf06;;
+    background-color: #fdbf06;
     border: 1px solid black;
     width: 90%;
     margin-bottom: 3em;
@@ -33,6 +33,7 @@ td {
     border: 1px solid black;
     margin-bottom: 3em;
     align-items: center;
+    justify-content: end;
 }
 
 .navUno p {
@@ -53,6 +54,7 @@ p a {
     height: 7em;
     margin-right: 31%;
     margin-left: 3%;
+    margin-right: 46%;
 }
 
 .navegador {

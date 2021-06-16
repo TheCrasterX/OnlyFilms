@@ -19,15 +19,12 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Peliculas</a></p>
-            <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
             <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
     </div>
-    <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
+    <br><br><br><br><br> 
     <div>
-    <?php 
-//<img src="#" class="fotoPerfil">
+    <?php
         $arrayFoto = array();
         $sql='SELECT fotoPerfil FROM only_users WHERE usuario="'.$_SESSION['UsuarioIniciado'].'"';
         $MyBBDD->consulta($sql);
@@ -45,7 +42,7 @@
     </div>
     <div class="todo">
         <div class="parteIzq">
-            <div class="divIzquierda">
+            <div class="divIzquierda2">
                 <h2 class="divfo">Miembros recientes</h2>
                 <hr>
                 <?php
@@ -64,13 +61,14 @@
                 }
                 for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil2"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>
             </div>
         </div>
-        <div class="spanes">
+        <div class="spanes2">
+            <div id="comentariosPerfil"><h1>Comentarios Realizados</h1></div>
             <div class="feedPerfil"> <!-- Añadir un título para los comentarios de uno mismo -->
                 <?php
                     $arrayPost = array();
@@ -90,7 +88,7 @@
                 ?>
             </div>
         </div>
-        <div class="divSpanDerecha"> <!-- Esto hay que arreglarlo para que ocupe de largo solo lo que contenga-->
+        <div class="divSpanDerecha2"> 
             <span>
                 <h2>Personas que quizá te interesen</h2>
                 <hr>
@@ -109,8 +107,7 @@
                     array_push($arrayFoto, $fotoPerfil);
                 }
                 for ($i=0; $i < 5 ; $i++) { 
-                    /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil2"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>

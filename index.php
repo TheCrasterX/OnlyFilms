@@ -18,8 +18,6 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Películas</a></p>
-            <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
             <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
     </div>
@@ -33,6 +31,7 @@
         <div class="parteIzq">
             <div class="divIzquierda">
                 <h2 class="divfo">Miembros recientes</h2>
+                <hr>
                 <?php
                 $arrayId = array();
                 $arrayUsuario = array();
@@ -49,7 +48,7 @@
                 }
                 for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil2"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>
@@ -72,7 +71,7 @@
                     }
                 }
 
-                echo '<img src="'.$arrayFoto[0].'"class="fotoPerfil">';
+                echo '<img src="'.$arrayFoto[0].'"class="fotoPerfil4">';
             ?>
                 <?php
                     echo '<form action="classBBDD.php" method="post">';
@@ -119,7 +118,7 @@
                     
                     for ($i=0; $i < 9 ; $i++) { 
                         echo '<div class="navegador">
-                                <img src="'.$arrayFoto[$i].'"class="fotoPerfil">
+                                <img src="'.$arrayFoto[$i].'"class="fotoPerfil3">
                                 <p class="autorPost">'.$arrayAutorPost[$i].':</p>
                                 <p class="post"> <br>'.$arrayPost[$i].'</p>
                             </div>
@@ -145,7 +144,7 @@
                 }
                 for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil2"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>

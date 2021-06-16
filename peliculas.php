@@ -14,14 +14,12 @@ include('classBBDD.php');
 </head>
 
 <body id="bodyPelis">
-    <div class="navegador">
+<div class="navegador">
         <nav class="navUno">
-            <img class="logo" src="logo.png">
+        <img class="logo" src="logo.png">
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
-            <p><a href="peliculas.php">Películas</a></p>
-            <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
+            <p><a href="peliculas.php">Peliculas</a></p>
             <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
     </div>
