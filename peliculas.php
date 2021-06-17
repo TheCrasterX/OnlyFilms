@@ -13,7 +13,7 @@ include('classBBDD.php');
     <title>Peliculas / Onlyfilms</title>
 </head>
 
-<body id="bodyPelis">
+<body>
 <div class="navegador">
         <nav class="navUno">
         <img class="logo" src="logo.png">
@@ -34,7 +34,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -50,7 +50,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         ?>
     </table>
@@ -64,7 +64,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -79,7 +79,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -94,7 +94,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
@@ -109,7 +109,7 @@ include('classBBDD.php');
         while ($fila = $MyBBDD->extraer_registro()) {
             $id = $fila['id'];
             $titulo = $fila['Titulo'];
-            echo "<tr><td><a href='pelicula.php?id=$id';>$titulo</a></td></tr>";
+            echo "<tr><td><a class='animacion' href='pelicula.php?id=$id';>$titulo</a></td></tr>";
         }
         unset($arrayTitulo);
         ?>
