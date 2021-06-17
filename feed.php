@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="favicon.ico">
     <title>Onlyfilms</title>
 </head>
-<body>
+<body class="body1">
     <div class="navegador">
         <nav class="navUno">
             <img class="logo" src="logo.png">

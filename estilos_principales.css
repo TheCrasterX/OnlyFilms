@@ -1,8 +1,8 @@
 .body1 {
-    background: linear-gradient(red, yellow, blue, green);  
+    background: linear-gradient(red, yellow, blue, green);
 }
 
-.body2{
+.body2 {
     background-color: grey;
 }
 
@@ -159,7 +159,6 @@ p a {
     color: white;
 }
 
-
 .peli {
     background-color: black;
     width: 100%;
@@ -210,7 +209,6 @@ textarea {
     border-radius: 20px;
 }
 
-
 .botones {
     float: right;
 }
@@ -243,7 +241,6 @@ textarea {
     text-align: center;
     margin-top: 1em;
 }
-
 
 nav a:hover {
     background: #e06c1f;
@@ -300,13 +297,13 @@ footer.perfil {
     justify-content: center;
 }
 
-.post{
+.post {
     margin: 0% 1% 1%;
     width: 70%;
     font-family: calibri;
 }
 
-.post2{
+.post2 {
     margin: 2% 1%;
     font-family: calibri;
 }
@@ -343,7 +340,6 @@ footer.perfil {
 }
 
 .sectionprincipal {
-
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 5%;
@@ -354,11 +350,9 @@ legend {
 }
 
 .enter {
-
     margin: 0 auto;
     display: inline-block;
     float: none;
-
 }
 
 .section1 {
@@ -368,18 +362,14 @@ legend {
     background-color: black;
 }
 
-
 @keyframes rotarLetra {
     0% {
         transform: rotate(0deg);
     }
-
     50% {
         transform: rotate(+360deg);
     }
-
     100% {
         transform: rotate(0deg);
     }
 }
-

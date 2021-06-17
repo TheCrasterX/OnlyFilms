@@ -63,10 +63,10 @@ window.onload=function(){
             while ($fila = $MyBBDD->extraer_registro()) {
                 foreach ($fila as $indice => $valor) {
                     if($valor ==  $_SESSION['ContraUsuario']) {
-                        echo "<form name='miformulario' action='index.php' method='post'>
+                        echo "<form name='miformulario' action='feed.php' method='post'>
                             </form>";
                     } else if ($valor != $_SESSION['UsuarioIniciado'] || $valor != $_SESSION['ContraUsuario']){
-                        echo "<form action='Login.php' method='post'> 
+                        echo "<form action='index.php' method='post'> 
                             <link rel='icon' type='image/png' href='favicon.ico'>
                             <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
                             <title>OnlyFilms</title>
@@ -86,7 +86,7 @@ window.onload=function(){
         $sql = "INSERT INTO only_post (usuario, comentario, fecha) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."', SYSDATE())";
         $MyBBDD->consulta($sql);
         unset($publicacion);
-        echo "<form action='index.php' method='post'>
+        echo "<form action='feed.php' method='post'>
         <link rel='stylesheet' type='text/css' href='estilos_principales.css'>
         <link rel='icon' type='image/png' href='favicon.ico'>
         <title>OnlyFilms</title>
