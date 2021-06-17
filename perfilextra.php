@@ -32,31 +32,33 @@
             <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
             <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
+        
     </div>
-    <br><br><br><br><br> <!-- Esto hay que arreglarlo -->
     <div>
+    <br><br>
     <?php
             $idUsuario = $_GET['id'];
+            $arrayFoto = array();
+            $sql="SELECT fotoPerfil FROM only_users WHERE id= $idUsuario";
+            $MyBBDD->consulta($sql);
+            while ($fila = $MyBBDD->extraer_registro()) {
+                foreach ($fila as $indice => $valor) {
+                    array_push($arrayFoto, $valor);
+                }
+            }
+    
+            for ($i=0; $i < count($arrayFoto) ; $i++) { 
+                echo "<img src=".$arrayFoto[$i]." class='fotoPerfil'>";
+            }
             $sql = "SELECT usuario FROM only_users WHERE id= $idUsuario";
             $MyBBDD->consulta($sql);
             while ($fila = $MyBBDD->extraer_registro()) {
                 $usuario = $fila['usuario'];
-                echo "<h1>Perfil de: $usuario</h1>";
+                echo "<p style='text-align:left; font-size: 300%'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$usuario</p>";
             }
     ?>
     <?php 
-        $arrayFoto = array();
-        $sql="SELECT fotoPerfil FROM only_users WHERE id= $idUsuario";
-        $MyBBDD->consulta($sql);
-        while ($fila = $MyBBDD->extraer_registro()) {
-            foreach ($fila as $indice => $valor) {
-                array_push($arrayFoto, $valor);
-            }
-        }
-
-        for ($i=0; $i < count($arrayFoto) ; $i++) { 
-            echo "<img src=".$arrayFoto[$i]." class='fotoPerfil'>";
-        }
+        
     ?>
         
     </div>
