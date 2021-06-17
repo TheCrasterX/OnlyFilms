@@ -25,10 +25,10 @@
     <div class="navegador">
         <nav class="navUno">
         <img class="logo" src="logo.png">
-            <p><a href="index.php">Inicio</a></p>
+            <p><a href="feed.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Peliculas</a></p>
-            <p><a href="login.php">Cerrar Sesión</a></p>
+            <p><a href="index.php">Cerrar Sesión</a></p>
         </nav>
         
     </div>

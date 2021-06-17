@@ -14,7 +14,7 @@
     <section class="sectionprincipal">
         <h1>Formulario de registro</h1>
         <section class="section1">
-            <form class="form" action="index.php" method="POST">
+            <form class="form" action="feed.php" method="POST">
                 <br>
                 <hr>
                 <input type="text" name="user" placeholder="Usuario" required size="32"></input><br><br>
