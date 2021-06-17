@@ -12,7 +12,7 @@ include('classBBDD.php');
     <title>Pelicula</title>
 </head>
 
-<body>
+<body class="body1">
     <div class="navegador">
         <nav class="navUno">
             <img class="logo" src="logo.png">
