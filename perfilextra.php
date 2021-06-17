@@ -28,13 +28,11 @@
             <p><a href="index.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Peliculas</a></p>
-            <p><img class="mensaje" src="lupa.png"></p>
-            <p><img class="mensaje" src="https://i.ibb.co/8jmyjVg/bell-2.png"></p>
             <p><a href="login.php">Cerrar Sesión</a></p>
         </nav>
         
     </div>
-    <div>
+    <div style="text-align: center;">
     <br><br>
     <?php
             $idUsuario = $_GET['id'];
@@ -48,13 +46,13 @@
             }
     
             for ($i=0; $i < count($arrayFoto) ; $i++) { 
-                echo "<img src=".$arrayFoto[$i]." class='fotoPerfil'>";
+                echo "<img src=".$arrayFoto[$i]." class='fotoPerfil8'>";
             }
             $sql = "SELECT usuario FROM only_users WHERE id= $idUsuario";
             $MyBBDD->consulta($sql);
             while ($fila = $MyBBDD->extraer_registro()) {
                 $usuario = $fila['usuario'];
-                echo "<p style='text-align:left; font-size: 300%'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$usuario</p>";
+                echo "<p style= 'font-size: 300%'>$usuario</p>";
             }
     ?>
     <?php 
@@ -83,7 +81,7 @@
                 }
                 for ($i=0; $i < 5 ; $i++) { 
                     /*Aqui tambien puedes añadir estilos Tamara*/
-                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
+                    echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil7"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
                 ?>

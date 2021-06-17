@@ -28,10 +28,16 @@ h1, h3 {
 #fotoPerfil4{
     width: 20%;
 }
-
+.fotoPerfil7 {
+    width: 20%;
+    margin-top: 3%;
+}
+.fotoPerfil8{
+    width: 10%;
+}
 .post{
-    width: 70%;
-    margin-top: 0;
+    width: 20%;
+    margin-top: 3%;
 }
 
 #comentariosPerfil{
@@ -280,6 +286,16 @@ footer.perfil {
 }
 
 .divIzquierda {
+    width: 76%;
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid black;
+    color: #f97908;
+    font-family: calibri;
+    text-align: center;
+    margin-top: 3em;
+}
+.divIzquierdaPerfil {
     width: 76%;
     border-radius: 5px;
     background-color: black;

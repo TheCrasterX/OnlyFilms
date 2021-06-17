@@ -147,7 +147,7 @@
                     echo '<div class="navegador2"><a href=perfilextra.php?id='.$arrayId[$i].'><img src="'.$arrayFoto[$i].'"class="fotoPerfil2"><p class="personaRecomendada">'.$arrayUsuario[$i].'</p></a></div>';
                     echo '<br>';
                 }
-                ?>
+                ?><hr>
             </div>
         </div>
     </div>
