@@ -383,10 +383,3 @@ legend {
     }
 }
 
-@media all and (max-width: 300px) {
-    .sectionprincipal {
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-top: 0%;
-    }
-}
