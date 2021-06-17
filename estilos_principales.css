@@ -2,10 +2,12 @@ body {
     background-color: #5e5e5e;
 }
 
-h1, h3 {
+h1,
+h3 {
     text-align: center;
 }
-.bodyPost{
+
+.bodyPost {
     background: linear-gradient(70deg, #dd6014, #19d0ee87);
     display: flex;
     justify-content: center;
@@ -20,27 +22,30 @@ h1, h3 {
     margin-left: 10%;
 }
 
-.fotoPerfil3{
+.fotoPerfil3 {
     width: 10%;
     height: 4em;
 }
 
-#fotoPerfil4{
+#fotoPerfil4 {
     width: 20%;
 }
+
 .fotoPerfil7 {
     width: 20%;
     margin-top: 3%;
 }
-.fotoPerfil8{
+
+.fotoPerfil8 {
     width: 10%;
 }
-.post{
+
+.post {
     width: 70%;
     margin-top: 0%;
 }
 
-#comentariosPerfil{
+#comentariosPerfil {
     color: black;
     background: linear-gradient(180deg, rgb(255, 153, 0), white);
     border-radius: 15px;
@@ -50,7 +55,7 @@ h1, h3 {
     padding: 0 1%;
 }
 
-.autorPost{
+.autorPost {
     width: 16%;
     text-align: center;
     color: #e34a00;
@@ -78,16 +83,17 @@ p a {
     width: 122%;
     height: 18px;
 }
-.bodyDatosIncorrecto{
-        background: linear-gradient(70deg, black, white);
-        display: flex;
-        justify-content: center;
-        margin-top: 10%;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #dd6014;	
-    }
-    
+
+.bodyDatosIncorrecto {
+    background: linear-gradient(70deg, black, white);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #dd6014;
+}
+
 .logo {
     width: 14%;
     height: 7em;
@@ -100,12 +106,14 @@ p a {
     width: 100%;
     background-color: grey;
 }
+
 .navegador2 {
     text-align: center;
-    align-items:center;
+    align-items: center;
     width: 100%;
     background-color: grey;
 }
+
 .navDos {
     display: flex;
     justify-content: start;
@@ -131,7 +139,7 @@ p a {
     align-items: center;
 }
 
-.spanes2{
+.spanes2 {
     display: flex;
     margin: 2em;
     background-color: #5e5e5e;
@@ -178,9 +186,9 @@ nav a {
     background-color: black;
 }
 
-.input{
-margin-left: 2%;
-} 
+.input {
+    margin-left: 2%;
+}
 
 .feedPerfil {
     box-sizing: content-box;
@@ -222,7 +230,8 @@ textarea {
     text-align: center;
     margin-top: 4em;
 }
-.divSpanDerecha2{
+
+.divSpanDerecha2 {
     float: right;
     width: 15%;
     height: 10%;
@@ -235,12 +244,22 @@ textarea {
     text-align: center;
     margin-top: 1em;
 }
-.divIzquierda2{
+
+
+nav a:hover {
+    background: #e06c1f;
+    padding: 5%;
+    color: white;
+    border-radius: 20%;
+}
+
+.divIzquierda2 {
     width: 76%;
     border-radius: 5px;
     background-color: black;
     border: 1px solid black;
-    color: #f97908;;
+    color: #f97908;
+    ;
     font-family: calibri;
     text-align: center;
 }
@@ -259,16 +278,18 @@ footer {
     font-family: palatino sans;
     line-height: 50px;
     color: white;
-    word-spacing:2px;
+    word-spacing: 2px;
 }
+
 footer.perfil {
-    margin-top:12.5%;
+    margin-top: 12.5%;
 }
 
 .divfo {
     margin: 1em;
 }
-.fotoPerfil2{
+
+.fotoPerfil2 {
     width: 20%;
     margin-top: 3%;
 }
@@ -278,11 +299,11 @@ footer.perfil {
     justify-content: center;
 }
 
-.divComentarios{
+.divComentarios {
     width: 100%;
     background-color: black;
     color: white;
-    margin: 5px; 
+    margin: 5px;
 }
 
 .divIzquierda {
@@ -295,6 +316,7 @@ footer.perfil {
     text-align: center;
     margin-top: 3em;
 }
+
 .divIzquierdaPerfil {
     width: 76%;
     border-radius: 5px;
