@@ -48,7 +48,7 @@ window.onload=function(){
     $MyBBDD = new BBDD($host, $user, $password, $dbname, $port, $socket);
 //Esta funcion nos permite registrar a los usuarios en la bbdd e iniciarles sesion automaticamente
     if(isset($_POST['registrar'])) {
-        $sql = "INSERT INTO only_users (usuario, pass, email, fechNacimiento) VALUES ('".$_POST['user']."','".$_POST['pass']."','".$_POST['email']."', '".$_POST['birthDate']."')";
+        $sql = "INSERT INTO only_users (usuario, pass, email, fechNacimiento, fotoPerfil) VALUES ('".$_POST['user']."','".$_POST['pass']."','".$_POST['email']."', '".$_POST['birthDate']."','https://i.pinimg.com/originals/21/94/67/219467090c77c96d26d86238cf1846dc.jpg')";
         $MyBBDD->consulta($sql);
             $_SESSION['UsuarioIniciado'] = $_POST['user'];
             $_SESSION['ContraUsuario'] = $_POST['pass'];

@@ -16,10 +16,10 @@
     <div class="navegador">
         <nav class="navUno">
         <img class="logo" src="logo.png">
-            <p><a href="index.php">Inicio</a></p>
+        <p><a href="feed.php">Inicio</a></p>
             <p><a href="perfil.php">Perfil</a></p>
             <p><a href="peliculas.php">Peliculas</a></p>
-            <p><a href="login.php">Cerrar Sesión</a></p>
+            <p><a href="index.php">Cerrar Sesión</a></p>
         </nav>
     </div>
     <br><br><br><br><br> 
@@ -80,7 +80,7 @@
                         }
                     }
 
-                    for ($i=0; $i <= 9 ; $i++) { 
+                    for ($i=0; $i <= count($arrayPost) - 1 ; $i++) { 
                         echo '<div class="divComentarios">';
                         echo '<p class="post2"> '.$arrayPost[$i].'</p>';
                         echo '</div>';    
