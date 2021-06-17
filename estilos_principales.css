@@ -1,5 +1,5 @@
 body {
-    background-color: #5e5e5e;
+    background: linear-gradient(red, yellow, blue, green);  
 }
 
 h1,
@@ -25,6 +25,7 @@ h3 {
 .fotoPerfil3 {
     width: 10%;
     height: 4em;
+    margin: 1%;
 }
 
 #fotoPerfil4 {
@@ -38,11 +39,6 @@ h3 {
 
 .fotoPerfil8 {
     width: 10%;
-}
-
-.post {
-    width: 70%;
-    margin-top: 0%;
 }
 
 #comentariosPerfil {
@@ -105,6 +101,7 @@ p a {
     display: flex;
     width: 100%;
     background-color: grey;
+    border-radius: 5px;
 }
 
 .navegador2 {
@@ -132,7 +129,6 @@ p a {
 .spanes {
     display: flex;
     margin: 2em;
-    background-color: #5e5e5e;
     width: 45%;
     align-items: end;
     flex-direction: column;
@@ -142,7 +138,6 @@ p a {
 .spanes2 {
     display: flex;
     margin: 2em;
-    background-color: #5e5e5e;
     width: 45%;
     align-items: end;
     flex-direction: column;
@@ -196,7 +191,7 @@ nav a {
     border: 1px solid black;
     border-radius: 5px;
     display: flex;
-    padding: 10px;
+    padding: 2%;
     flex-direction: column;
     background-color: grey;
 }
@@ -299,11 +294,24 @@ footer.perfil {
     justify-content: center;
 }
 
+.post{
+    margin: 0% 1% 1%;
+    width: 70%;
+    font-family: calibri;
+}
+
+.post2{
+    margin: 2% 1%;
+    font-family: calibri;
+}
+
 .divComentarios {
     width: 100%;
     background-color: black;
     color: white;
-    margin: 5px;
+    margin-bottom: 3%;
+    margin-left: 0%;
+    border-radius: 5px;
 }
 
 .divIzquierda {

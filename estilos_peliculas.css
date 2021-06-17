@@ -12,12 +12,7 @@ body {
 th {
     font-size: large;
 }
-nav a:hover {
-    background: #e06c1f;
-    padding: 5%;
-    color: white;
-    border-radius: 20%;
-}
+
 tr th {
     background-color: #0b0a0a;
     color: #fdbf06;

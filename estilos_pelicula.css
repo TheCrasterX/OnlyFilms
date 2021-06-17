@@ -1,5 +1,5 @@
 body {
-    background-color: #5e5e5e;
+    background: linear-gradient(red, yellow, blue, green);
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -12,7 +12,7 @@ body {
 }
 
 #divPrincipal {
-    background-color: grey;
+    background-color: #797676e6;
     width: 80%;
     border: 15px ridge black;
 }
