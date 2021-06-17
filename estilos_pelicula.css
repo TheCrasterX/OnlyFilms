@@ -16,7 +16,12 @@ body {
     width: 80%;
     border: 15px ridge black;
 }
-
+nav a:hover {
+    background: #e06c1f;
+    padding: 5%;
+    color: white;
+    border-radius: 20%;
+}
 .titulo {
     background-color: black;
     color: #fdbf06;
