@@ -92,6 +92,11 @@
         <div class="spanes">
             <div class="feedPerfil"> <!-- Añadir un título para los comentarios de uno mismo -->
                 <?php
+                    $sql = "SELECT usuario FROM only_users WHERE id= $idUsuario";
+                    $MyBBDD->consulta($sql);
+                    while ($fila = $MyBBDD->extraer_registro()) {
+                        $usuario = $fila['usuario'];
+                    }
                     $arrayPost = array();
                     $sql='SELECT comentario FROM only_post WHERE usuario="'.$usuario.'" ORDER BY fecha DESC';
                     $MyBBDD->consulta($sql);
@@ -101,16 +106,13 @@
                         }
                     }
 
-                    for ($i=0; $i <= 9 ; $i++) { 
+                    for ($i=0; $i <= 9 ; $i++) {
                         echo '<div class="divComentarios">';
                         echo '<p class="post"> '.$arrayPost[$i].'</p>';
                         echo '</div>';    
                     }
                 ?>
             </div>
-                <?php
-                //echo'<br>';
-                ?>
         </div>
     </div>
     <footer class="perfil"> <!-- Hay que hacer que se quede abajo el footer fijo-->
