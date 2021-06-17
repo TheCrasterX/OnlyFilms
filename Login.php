@@ -8,7 +8,7 @@
     <title>Login</title>
 </head>
 
-<body>
+<body class="body2">
 <section class="sectionprincipal">
   <h1>Bienvenido a OnlyFilms</h1>
     <section class="section1">
