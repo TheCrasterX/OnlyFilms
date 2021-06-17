@@ -9,7 +9,7 @@
     <title>register.php</title>
 </head>
 
-<body>
+<body class="body2">
     <!--Creamos un formulario que envía los datos a index.php, este formulario contiene los campos que después almacenaremos en index.php en las cookies.-->
     <section class="sectionprincipal">
         <h1>Formulario de registro</h1>
