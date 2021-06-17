@@ -1,5 +1,9 @@
-body {
+.body1 {
     background: linear-gradient(red, yellow, blue, green);  
+}
+
+.body2{
+    background-color: grey;
 }
 
 h1,
@@ -287,6 +291,8 @@ footer.perfil {
 .fotoPerfil2 {
     width: 20%;
     margin-top: 3%;
+    animation-name: rotarLetra;
+    animation-duration: 3s;
 }
 
 .todo {
@@ -362,9 +368,19 @@ legend {
     background-color: black;
 }
 
-.divfo a {
-    color: white;
-    text-decoration: none;
+
+@keyframes rotarLetra {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(+360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @media all and (max-width: 300px) {
