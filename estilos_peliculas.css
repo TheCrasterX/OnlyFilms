@@ -78,3 +78,21 @@ nav a {
     align-items: center;
     background-color: #ee6523f2;
 }
+
+.animacion {
+    animation-duration: 4s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
