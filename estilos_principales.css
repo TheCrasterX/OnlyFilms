@@ -6,9 +6,11 @@
     background-color: grey;
 }
 
-h1,
-h3 {
+h1{
     text-align: center;
+    color: #ffa501;
+    font-family: impact;
+    font-size: xxx-large;
 }
 
 .bodyPost {
@@ -356,10 +358,12 @@ legend {
 }
 
 .section1 {
+    text-align: center;
     color: white;
     display: flex;
     justify-content: center;
     background-color: black;
+    font-family: impact;
 }
 
 @keyframes rotarLetra {
