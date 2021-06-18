@@ -80,7 +80,7 @@
                         }
                     }
 
-                    for ($i=0; $i <= count($arrayPost) - 1 ; $i++) { 
+                    for ($i=0; $i <= count($arrayPost) - 1 ; $i++) {
                         echo '<div class="divComentarios">';
                         echo '<p class="post2"> '.$arrayPost[$i].'</p>';
                         echo '</div>';    

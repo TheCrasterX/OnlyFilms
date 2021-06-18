@@ -99,7 +99,7 @@ window.onload=function(){
     if(isset($_POST['comentar'])) {
         $idPelicula = $_SESSION['idPelicula'];
         $publicacion = $_POST['publicacion'];
-        $sql = "INSERT INTO only_post (usuario, comentario, id_peli) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','".$idPelicula."')";
+        $sql = "INSERT INTO only_post (usuario, comentario, id_peli, fecha) VALUES ('".$_SESSION['UsuarioIniciado']."', '". $publicacion ."','".$idPelicula."', SYSDATE())";
         $MyBBDD->consulta($sql);
         unset($publicacion);
         echo "<form action='peliculas.php' method='post'> 
