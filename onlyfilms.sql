@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2021 a las 14:26:26
+-- Tiempo de generación: 18-06-2021 a las 12:19:35
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -80,34 +80,15 @@ INSERT INTO `only_post` (`id`, `usuario`, `comentario`, `fecha`, `id_peli`) VALU
 (15, 'Mario', 'Humanes es una aldea', '2021-05-06 00:00:00', 0),
 (19, 'Periquito', 'Buenas a todos gente de Fuenla', '2021-05-11 21:24:35', 0),
 (20, 'Mario', 'Sin pijama como la Becky G', '2021-05-11 21:27:37', 0),
-(66, 'Mario', 'No entraré en la casa de Odin con miedo!', '2021-05-11 23:23:37', 0),
 (67, 'Mario', 'Tomo me male sal', '2021-05-11 23:36:29', 0),
 (69, 'TheCrasterX', 'Ponganme un jagger con cocacolita', '2021-05-11 23:41:57', 0),
 (70, 'TheCrasterX', 'Mae mia chico', '2021-05-11 23:43:10', 0),
 (71, 'TheCrasterX', 'Que no panda el cunico', '2021-05-11 23:43:22', 0),
 (72, 'TheCrasterX', 'A tomar por cleta la biciculo', '2021-05-11 23:43:31', 0),
-(73, 'TheCrasterX', 'ESO PARA TI JUANITO PARA TUS COSAS', '2021-05-11 23:43:56', 0),
 (74, 'TheCrasterX', 'Getafe sigue siendo una aldea', '2021-05-11 23:44:12', 0),
-(75, 'tamaraAH4', 'hola hola', '2021-06-01 11:46:09', 0),
-(76, 'tamaraAH4', 'hola hola hola', '2021-06-01 11:46:51', 0),
 (77, 'tamaraAH4', 'Me gusta esta pelicula', '2021-06-01 13:06:34', 0),
-(78, 'tamaraAH4', 'pepito', '2021-06-01 18:34:39', 0),
-(79, 'tamaraAH4', 'ff', '2021-06-01 18:50:37', 0),
 (111, 'tamaraAH4', 'No me gust la pelicula', '0000-00-00 00:00:00', 1),
-(112, 'tamaraAH4', 'holi', '2021-06-01 19:26:43', 0),
-(113, 'tamaraAH4', 'gigi', '2021-06-01 19:32:30', 0),
-(114, 'tamaraAH4', 'jiji', '2021-06-01 19:33:51', 0),
-(115, 'tamaraAH4', 'dd', '2021-06-01 19:35:48', 1),
-(116, 'tamaraAH4', 'ff', '2021-06-01 19:41:45', 0),
-(117, 'tamaraAH4', 'tamara', '2021-06-01 19:46:24', 0),
-(118, 'Mario', 'dasdasdsadas', '2021-06-01 20:23:02', 0),
-(119, 'Mario', 'dadad', '2021-06-01 20:24:14', 0),
-(120, 'Mario', 'dadadadadadadada', '2021-06-01 20:24:52', 0),
 (121, 'Mario', 'Tremendo peliculon bb <3', NULL, 1),
-(122, 'Mario', 'tremeeeeeendo', '2021-06-01 21:07:07', 0),
-(123, 'Mario', 'gdfggdfgdg', '0000-00-00 00:00:00', 0),
-(124, 'Mario', 'gdgdfgdfgdg', NULL, 1),
-(125, 'Mario', 'vaya peliculita bbs', NULL, 1),
 (126, 'Mario', 'Tremendo peliculon maquinas', NULL, 3),
 (127, 'Mario', 'Demasiado azúcar para mi cuerpo', NULL, 5),
 (128, 'TheCrasterX', 'pff y que lo digas chaval', NULL, 1),
@@ -118,7 +99,17 @@ INSERT INTO `only_post` (`id`, `usuario`, `comentario`, `fecha`, `id_peli`) VALU
 (133, 'Lottor24', 'A ver que tal ', '2021-06-12 14:16:57', 0),
 (134, 'Lottor24', 'A eso de las 12 os pongo que me ha parecido que acabo de parar para pillarme unas cocacolas\r\n', '2021-06-12 14:17:35', 0),
 (135, 'Lottor24', 'Parecía que iba a ser un pastelón pero al final me ha gustado, un punto bueno de vista sobre como son las parejas realmente, sin tanta ideal', NULL, 9),
-(136, 'Mario', 'Mira que a mi no me gustan los musicales demasiado pero he de decir que entiendo porque tuvo la fama que tuvo en su momento, las canciones son pegadizas y la trama sin ser nada del otro mundo se hace entretenida', NULL, 10);
+(136, 'Mario', 'Mira que a mi no me gustan los musicales demasiado pero he de decir que entiendo porque tuvo la fama que tuvo en su momento, las canciones son pegadizas y la trama sin ser nada del otro mundo se hace entretenida', NULL, 10),
+(137, 'Mario', 'guapisima', NULL, 1),
+(138, 'Mario', 'mola', NULL, 1),
+(139, 'Mario', 'Me he asustao mucho la verdad pero me gusta', NULL, 2),
+(140, 'Mario', 'Y muy buena fotografia aunque trama extraña', NULL, 2),
+(141, 'Mario', 'Por cierto, es de esas pocas novelas llevadas al cine que el propio autor del libro odia como ha sido adaptada al cine', NULL, 2),
+(142, 'Mario', 'Me ha encantado', NULL, 4),
+(143, 'Mario', 'Me ha encantado', NULL, 4),
+(144, 'Mario', 'Practicamente esto esta terminado', '2021-06-18 11:54:56', 0),
+(145, 'Mario', 'De las pelis de terror que mas miedo me dan la verdad', NULL, 7),
+(146, 'Mario', 'me ha gustado', '2021-06-18 12:12:22', 10);
 
 -- --------------------------------------------------------
 
@@ -189,13 +180,13 @@ ALTER TABLE `only_films`
 -- AUTO_INCREMENT de la tabla `only_post`
 --
 ALTER TABLE `only_post`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT de la tabla `only_users`
 --
 ALTER TABLE `only_users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
